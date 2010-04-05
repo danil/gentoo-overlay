@@ -18,6 +18,7 @@ DEPEND="dev-libs/fcgi"
 RDEPEND=""
 
 src_compile() {
+	eautoconf
 	econf
     emake
 }
