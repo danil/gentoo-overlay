@@ -17,6 +17,7 @@ DEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
 	epatch "${FILESDIR}"/${P}-apache-move.patch
 	epatch "${FILESDIR}"/${P}-nginx-add.patch
 }

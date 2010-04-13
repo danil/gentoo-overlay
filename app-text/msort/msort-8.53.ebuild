@@ -15,14 +15,13 @@ IUSE=""
 DEPEND="
 >=dev-libs/tre-0.8.0
 dev-libs/icu"
-RDEPEND=""
 
 src_compile() {
-	econf --disable-utf8proc --disable-uninum || die "econf failed!"
-	emake || die "emake failed!"
+	econf --disable-utf8proc --disable-uninum
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install
-	dodoc README NEWS ChangeLog AUTHORS
+	make DESTDIR="${D}" install || die "install failed"
+	dodoc README NEWS ChangeLog AUTHORS || die "dodoc failed"
 }

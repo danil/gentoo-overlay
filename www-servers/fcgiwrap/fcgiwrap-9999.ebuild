@@ -18,14 +18,13 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="dev-libs/fcgi"
-RDEPEND=""
 
 src_compile() {
 	eautoconf
 	econf
-    emake
+    emake || die "emake failed"
 }
 
 src_install() {
-    dobin fcgiwrap
+    dobin fcgiwrap || die "install failed"
 }
