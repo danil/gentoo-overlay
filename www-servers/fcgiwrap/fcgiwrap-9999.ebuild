@@ -1,5 +1,6 @@
-# Copyright 2010 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: $
 # <http://j3qq4.org/src/portage/www-apps/fcgiwrap/fcgiwrap-9999.ebuild>,
 # <http://github.com/wmark/ossdl-overlay/blob/master/www-misc/fcgiwrap/fcgiwrap-9999.ebuild>.
 
