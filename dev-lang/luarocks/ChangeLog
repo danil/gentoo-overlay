@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/luarocks
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header$
+
+*luarocks-2.0.1 (12 Apr 2010)
+
+  12 Apr 2010; Danil Kutkevich <danil.kutkevich.org> luarocks-2.0.1.ebuild :
+  Initial import.  Ebuild submitted by Danil Kutkevich
+  <danil.kutkevich.org>. Converted from dev-lang/luarocks from Portage
+  tree.
