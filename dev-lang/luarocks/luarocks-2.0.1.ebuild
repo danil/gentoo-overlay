@@ -29,10 +29,9 @@ src_compile() {
 	# can't handle.
 	./configure \
 			--prefix=/usr \
-			--scripts-dir=/usr/bin \
+			--rocks-tree=/usr/lib/lua/luarocks \
 			--with-lua=/usr \
 			--with-lua-lib=/usr/$(get_libdir) \
-			--rocks-tree=/usr/lib/lua/luarocks \
 			--with-downloader=$USE_FETCH \
 			--with-md5-checker=$USE_MD5 \
 			--force-config || die "configure failed"
