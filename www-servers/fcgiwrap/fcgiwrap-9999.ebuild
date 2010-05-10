@@ -4,9 +4,10 @@
 # <http://j3qq4.org/src/portage/www-apps/fcgiwrap/fcgiwrap-9999.ebuild>,
 # <http://github.com/wmark/ossdl-overlay/blob/master/www-misc/fcgiwrap/fcgiwrap-9999.ebuild>.
 
+EAPI="2"
+
 inherit autotools eutils git
 
-EAPI="2"
 DESCRIPTION="Simple FastCGI wrapper for CGI scripts"
 HOMEPAGE="http://nginx.localdomain.pl/wiki/FcgiWrap"
 SRC_URI=""
@@ -20,12 +21,15 @@ IUSE=""
 
 DEPEND="dev-libs/fcgi"
 
-src_compile() {
-	eautoconf
+src_configure() {
+	eautoconf || die "eautoconf failed"
 	econf
-    emake || die "emake failed"
 }
 
+# src_compile() {
+# 	emake || die "emake failed"
+# }
+
 src_install() {
-    dobin fcgiwrap || die "install failed"
+	dobin fcgiwrap || die "install failed"
 }

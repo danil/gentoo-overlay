@@ -16,6 +16,7 @@ LICENSE="atheros-hal
 SLOT="0"
 KEYWORDS="~x86"
 
+IUSE=""
 DEPEND="app-arch/sharutils"
 RDEPEND="!net-wireless/madwifi-old
 		!net-wireless/madwifi-ng
@@ -32,19 +33,20 @@ MODULESD_ATH_PCI_DOCS="README"
 pkg_setup() {
 	linux-mod_pkg_setup
 
-	MODULE_NAMES="ath_hal(net:${S}/ath_hal)
-				wlan(net:${S}/net80211)
-				wlan_acl(net:${S}/net80211)
-				wlan_ccmp(net:${S}/net80211)
-				wlan_tkip(net:${S}/net80211)
-				wlan_wep(net:${S}/net80211)
-				wlan_xauth(net:${S}/net80211)
-				wlan_scan_sta(net:${S}/net80211)
-				wlan_scan_ap(net:${S}/net80211)
-				ath_rate_amrr(net:${S}/ath_rate/amrr)
-				ath_rate_onoe(net:${S}/ath_rate/onoe)
-				ath_rate_sample(net:${S}/ath_rate/sample)
-				ath_pci(net:${S}/ath)"
+	MODULE_NAMES="ath_hal(net:${S}/ath_hal)"
+	MODULE_NAMES="${MODULE_NAMES} ath_hal(net:${S}/ath_hal)"
+	MODULE_NAMES="${MODULE_NAMES} wlan(net:${S}/net80211)"
+	MODULE_NAMES="${MODULE_NAMES} wlan_acl(net:${S}/net80211)"
+	MODULE_NAMES="${MODULE_NAMES} wlan_ccmp(net:${S}/net80211)"
+	MODULE_NAMES="${MODULE_NAMES} wlan_tkip(net:${S}/net80211)"
+	MODULE_NAMES="${MODULE_NAMES} wlan_wep(net:${S}/net80211)"
+	MODULE_NAMES="${MODULE_NAMES} wlan_xauth(net:${S}/net80211)"
+	MODULE_NAMES="${MODULE_NAMES} wlan_scan_sta(net:${S}/net80211)"
+	MODULE_NAMES="${MODULE_NAMES} wlan_scan_ap(net:${S}/net80211)"
+	MODULE_NAMES="${MODULE_NAMES} ath_rate_amrr(net:${S}/ath_rate/amrr)"
+	MODULE_NAMES="${MODULE_NAMES} ath_rate_onoe(net:${S}/ath_rate/onoe)"
+	MODULE_NAMES="${MODULE_NAMES} ath_rate_sample(net:${S}/ath_rate/sample)"
+	MODULE_NAMES="${MODULE_NAMES} ath_pci(net:${S}/ath)"
 
 	BUILD_PARAMS="KERNELPATH=${KV_OUT_DIR}"
 
@@ -72,9 +74,9 @@ pkg_postinst() {
 	linux-mod_pkg_postinst
 
 	einfo
-	einfo "Interfaces (athX) are now automatically created upon loading the ath_pci"
-	einfo "module."
+	einfo "Interfaces (athX) are now automatically created"
+	einfo "upon loading the ath_pci module."
 	einfo
-	einfo "The type of the created interface can be controlled through the 'autocreate'"
-	einfo "module parameter."
+	einfo "The type of the created interface can be controlled"
+	einfo "through the 'autocreate' module parameter."
 }

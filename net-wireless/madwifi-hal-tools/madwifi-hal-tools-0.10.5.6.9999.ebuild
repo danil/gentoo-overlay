@@ -25,12 +25,12 @@ RDEPEND="!net-wireless/madwifi-old-tools
 #toolchain-funcs eclass: make ARCH="$(tc-arch-kernel)"
 
 src_compile() {
-	cd ${S}/tools
+	cd "${S}/tools"
 	emake || die "emake failed"
 }
 
 src_install() {
-	cd ${S}/tools
+	cd "${S}/tools"
 	emake ARCH="$(tc-arch-kernel)" DESTDIR="${D}" BINDIR=/usr/bin MANDIR=/usr/share/man STRIP=echo \
 		install || die "emake install failed"
 
@@ -39,7 +39,7 @@ src_install() {
 
 	# install headers for use by
 	# net-wireless/wpa_supplicant and net-wireless/hostapd
-	cd ${S}
+	cd "${S}"
 	insinto /usr/include/madwifi/include/
 	doins include/*.h
 	insinto /usr/include/madwifi/net80211
