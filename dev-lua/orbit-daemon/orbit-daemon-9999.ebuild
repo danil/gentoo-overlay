@@ -5,7 +5,20 @@
 DESCRIPTION="Lua Orbit initscripts"
 HOMEPAGE="http://kutkevich.org/gentoo#orbit-daemon"
 
-LICENSE="GPL-3"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
+
+RDEPEND="dev-lang/luarocks"
+
+src_install() {
+	newinitd "${FILESDIR}"/orbit.init orbit
+	newconfd "${FILESDIR}"/orbit.confd orbit
+
+	keepdir /var/log/orbit
+
+	# Logrotate.
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}/orbit.logrotate" orbit
+}

@@ -1,0 +1,131 @@
+#!/sbin/runscript
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+APP_NAME=${SVCNAME#*.}
+PIDFILE_DIR=/var/run/orbit
+PIDFILE=${PIDFILE_DIR}/${APP_NAME}.pid
+APP_SCRIPTNAME=${ORBIT_APP##*/}
+APP_DIR=${ORBIT_APP%/*}
+
+depend() {
+    need net
+    use dns logger
+}
+
+checkconfig() {
+    if [ "${APP_NAME}" = "${SVCNAME}" ]; then
+        eerror "You have to create an init script for each application"
+        eerror "as well as a copy of the configuration file"
+        eerror "and modify it appropriately like so:"
+        eerror "    ln -s orbit /etc/init.d/orbit.<application>"
+        eerror "    cp /etc/conf.d/orbit /etc/conf.d/orbit.<application>"
+        eerror "    `basename "${EDITOR}"` /etc/conf.d/orbit.<application>"
+    return 1
+    fi
+
+    if [ -z "${ORBIT_BINARY}" ]; then
+        eerror "You need to specify which \$ORBIT_BINARY you want to start."
+        eerror "Please adjust /etc/conf.d/orbit.${APP_NAME}"
+        return 1
+    fi
+
+    if [ ! -x "${ORBIT_BINARY}" ]; then
+        eerror "The file ${ORBIT_BINARY} specified as \$ORBIT_BINARY"
+        eerror "does not exist or is not executable."
+        eerror "Please adjust /etc/conf.d/orbit.${APP_NAME}"
+        return 1
+    fi
+
+    if [ -n "${ORBIT_USER}" ] && ! id -u "${ORBIT_USER}" &>/dev/null; then
+        eerror "${ORBIT_USER}: No such user"
+        return 1
+    fi
+
+    if [ -n "${ORBIT_GROUP}" ] && ! id -g "${ORBIT_GROUP}" &>/dev/null; then
+        eerror "${ORBIT_GROUP}: No such group"
+        return 1
+    fi
+
+    if [ -z "${ORBIT_APP}" ]; then
+        eerror "You need to specify which \$ORBIT_APP you want to start."
+        eerror "Please adjust /etc/conf.d/orbit.${APP_NAME}"
+        return 1
+    fi
+
+    if [ ! -f "${ORBIT_APP}" ]; then
+        eerror "The file ${ORBIT_APP} specified as \$ORBIT_APP"
+        eerror "does not exist."
+        eerror "Please adjust /etc/conf.d/orbit.${APP_NAME}"
+        return 1
+    fi
+
+    if [ -n "${ORBIT_USER}" ] && [ -n "${ORBIT_USER}" ] \
+         && su --login "${ORBIT_USER}" --shell /bin/bash \
+               --command "test ! -r \"${ORBIT_APP}\""; then
+        eerror "The file ${ORBIT_APP} specified as \$ORBIT_APP"
+        eerror "does not have read permission for user ${ORBIT_USER}."
+        eerror "Please adjust /etc/conf.d/orbit.${APP_NAME}"
+        return 1
+    fi
+
+    if [ -n "${ORBIT_LOG}" ] && [ ! -f "${ORBIT_LOG}" ]; then
+        eerror "The file ${ORBIT_LOG} specified as \$ORBIT_LOG"
+        eerror "does not exist."
+        eerror "Please adjust /etc/conf.d/orbit.${APP_NAME}"
+        return 1
+    fi
+
+    if [ -n "${ORBIT_LOG}" ] && [ -n "${ORBIT_USER}" ] \
+         && su --login "${ORBIT_USER}" --shell /bin/bash \
+               --command "test ! -w \"${ORBIT_LOG}\""; then
+        eerror "The file ${ORBIT_LOG} specified as \$ORBIT_LOG"
+        eerror "does not have write permission for user ${ORBIT_USER}."
+        eerror "Please adjust /etc/conf.d/orbit.${APP_NAME}"
+        return 1
+    fi
+}
+
+start() {
+    checkconfig || return 1
+
+    checkpath -d \
+        --owner $( [ -n "${ORBIT_USER}" ] && echo "${ORBIT_USER}" || echo 0 ) \
+        --mode 0755 "${PIDFILE_DIR}"
+
+    if [ -n "${ORBIT_USER}" ] && [ "${ORBIT_USER}" != "root" ]; then
+        OPTIONS="${OPTIONS} --user ${ORBIT_USER} --chuid ${ORBIT_USER}"
+        if [ -n "${ORBIT_GROUP}" ] && [ "${ORBIT_GROUP}" != "root" ]; then
+            OPTIONS="${OPTIONS}:${ORBIT_GROUP}"
+        fi
+    fi
+
+    if [ -n "${ORBIT_PORT}" ]; then
+        ORBIT_APP_OPTIONS="${ORBIT_APP_OPTIONS} --port=${ORBIT_PORT}"
+    fi
+
+    if [ -n "${ORBIT_LOG}" ]; then
+        ORBIT_APP_OPTIONS="${ORBIT_APP_OPTIONS} --log=${ORBIT_LOG}"
+    fi
+
+    ebegin "Starting Orbit application ${APP_NAME}"
+    export LUA_PATH LUA_CPATH
+    cd "${APP_dir}"
+    start-stop-daemon --start --background \
+        ${OPTIONS} --chdir "${APP_DIR}" --pidfile "${PIDFILE}" --make-pidfile \
+        --exec "${ORBIT_BINARY}" -- ${ORBIT_OPTIONS} \
+        -- ${ORBIT_APP_OPTIONS} "${APP_SCRIPTNAME}"
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping Orbit application ${APP_NAME}"
+    start-stop-daemon --stop \
+        ${OPTIONS} --pidfile "${PIDFILE}" --exec "${ORBIT_BINARY}"
+    eend $?
+}
+
+# Local Variables:
+# mode: sh
+# End:
