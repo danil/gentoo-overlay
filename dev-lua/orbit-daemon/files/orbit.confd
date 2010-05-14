@@ -21,8 +21,8 @@ ORBIT_APP="/var/www/kepler/foo/bar.lua"
 
 # The user and group to run your application as. If you do not specify
 # these, the application will be run as root:root.
-#ORBIT_USER=nobody
-#ORBIT_GROUP=nobody
+ORBIT_USER=orbit
+ORBIT_GROUP=orbit
 
 # Local Variables:
 # mode: conf

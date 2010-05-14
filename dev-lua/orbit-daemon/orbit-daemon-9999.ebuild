@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+MY_PN="${PN/-daemon/}"
 DESCRIPTION="Lua Orbit initscripts"
 HOMEPAGE="http://kutkevich.org/gentoo#orbit-daemon"
 
@@ -12,13 +13,19 @@ IUSE=""
 
 RDEPEND="dev-lang/luarocks"
 
-src_install() {
-	newinitd "${FILESDIR}"/orbit.init orbit
-	newconfd "${FILESDIR}"/orbit.confd orbit
+pkg_setup() {
+	# Creating nginx user and group.
+	enewgroup ${MY_PN}
+	enewuser ${MY_PN} -1 -1 -1 ${MY_PN}
+}
 
-	keepdir /var/log/orbit
+src_install() {
+	newinitd "${FILESDIR}"/${MY_PN}.init ${MY_PN}
+	newconfd "${FILESDIR}"/${MY_PN}.confd ${MY_PN}
+
+	keepdir /var/log/${MY_PN}
 
 	# Logrotate.
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}/orbit.logrotate" orbit
+	newins "${FILESDIR}/${MY_PN}.logrotate" ${MY_PN}
 }

@@ -127,5 +127,5 @@ stop() {
 }
 
 # Local Variables:
-# mode: sh
+# mode: shell-script
 # End:
