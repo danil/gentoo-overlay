@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+inherit eutils
+
 MY_PN="${PN/-daemon/}"
 DESCRIPTION="Lua Orbit initscripts"
 HOMEPAGE="http://kutkevich.org/gentoo#orbit-daemon"
