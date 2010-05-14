@@ -18,7 +18,7 @@ RDEPEND="dev-lang/luarocks"
 pkg_setup() {
 	# Creating nginx user and group.
 	enewgroup ${MY_PN}
-	enewuser ${MY_PN} -1 -1 -1 ${MY_PN}
+	enewuser ${MY_PN} -1 -1 / ${MY_PN}
 }
 
 src_install() {
