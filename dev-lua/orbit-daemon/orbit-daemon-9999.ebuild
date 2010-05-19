@@ -33,5 +33,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "dev-lua/orbit-daemon depend on luarock orbit."
+	elog "dev-lua/orbit-daemon depend on luarock orbit."
 }
