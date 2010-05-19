@@ -31,3 +31,7 @@ src_install() {
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/${MY_PN}.logrotate" ${MY_PN}
 }
+
+pkg_postinst() {
+	einfo "dev-lua/orbit-daemon depend on luarock orbit."
+}
