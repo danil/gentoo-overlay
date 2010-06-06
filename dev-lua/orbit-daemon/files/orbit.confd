@@ -10,7 +10,7 @@ LUA_CPATH="/usr/lib/lua/luarocks/lib/lua/5.1//?.so;./?.so;/usr/local/lib/lua/5.1
 
 # Path to the Orbit binary (needs to be absolute path).
 ORBIT_BINARY="/usr/bin/lua"
-ORBIT_OPTIONS="-lluarocks.loader /usr/lib/lua/luarocks/lib/luarocks/rocks/orbit/2.1.0-1/bin/orbit"
+ORBIT_OPTIONS="-lluarocks.loader /usr/lib/lua/luarocks/bin/orbit"
 # Path to the Orbit application (needs to be absolute path).
 ORBIT_APP="/var/www/kepler/foo/bar.lua"
 # Binds to the specified port (default 8080).
