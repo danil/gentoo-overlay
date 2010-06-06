@@ -5,7 +5,3 @@
 /var/log/orbit/*.log {
 	missingok
 }
-
-# Local Variables:
-# mode: shell-script
-# End:
