@@ -126,7 +126,3 @@ stop() {
         ${OPTIONS} --pidfile "${PIDFILE}" --exec "${ORBIT_BINARY}"
     eend $?
 }
-
-# Local Variables:
-# mode: shell-script
-# End:
