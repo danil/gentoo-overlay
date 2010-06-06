@@ -2,6 +2,7 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=2&chap=4&style=printable>.
 
 APP_NAME=${SVCNAME#*.}
 PIDFILE_DIR=/var/run/orbit
