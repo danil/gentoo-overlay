@@ -7,6 +7,9 @@
 APP_NAME=${SVCNAME#*.}
 PIDFILE_DIR=/var/run/orbit
 PIDFILE=${PIDFILE_DIR}/${APP_NAME}.pid
+#"/home/joo/123/usr/lib/lua/luarocks/lib/luarocks/rocks/orbit/2.1.0-1/bin/orbit"
+#$(expr match "$string" '.*\($substring\)')
+ORBIT_VERSION=${ORBIT_BINARY%*/*}
 APP_SCRIPTNAME=${ORBIT_APP##*/}
 APP_DIR=${ORBIT_APP%/*}
 
@@ -24,6 +27,19 @@ checkconfig() {
         eerror "    cp /etc/conf.d/orbit /etc/conf.d/orbit.<application>"
         eerror "    `basename "${EDITOR}"` /etc/conf.d/orbit.<application>"
     return 1
+    fi
+
+    if [ -z "${LUA_BINARY}" ]; then
+        eerror "You need to specify which \$LUA_BINARY you want to use."
+        eerror "Please adjust /etc/conf.d/orbit.${APP_NAME}"
+        return 1
+    fi
+
+    if [ ! -x "${LUA_BINARY}" ]; then
+        eerror "The file ${LUA_BINARY} specified as \$LUA_BINARY"
+        eerror "does not exist or is not executable."
+        eerror "Please adjust /etc/conf.d/orbit.${APP_NAME}"
+        return 1
     fi
 
     if [ -z "${ORBIT_BINARY}" ]; then
@@ -110,19 +126,19 @@ start() {
         ORBIT_APP_OPTIONS="${ORBIT_APP_OPTIONS} --log=${ORBIT_LOG}"
     fi
 
-    ebegin "Starting Orbit application ${APP_NAME}"
+    ebegin "Starting orbit-${ORBIT_VERSION} application ${APP_NAME}"
     export LUA_PATH LUA_CPATH
     cd "${APP_dir}"
     start-stop-daemon --start --background \
         ${OPTIONS} --chdir "${APP_DIR}" --pidfile "${PIDFILE}" --make-pidfile \
-        --exec "${ORBIT_BINARY}" -- ${ORBIT_OPTIONS} \
+        --exec "${LUA_BINARY}" -- ${LUA_OPTIONS} ${ORBIT_BINARY} \
         -- ${ORBIT_APP_OPTIONS} "${APP_SCRIPTNAME}"
     eend $?
 }
 
 stop() {
-    ebegin "Stopping Orbit application ${APP_NAME}"
+    ebegin "Stopping orbit-${ORBIT_VERSION} application ${APP_NAME}"
     start-stop-daemon --stop \
-        ${OPTIONS} --pidfile "${PIDFILE}" --exec "${ORBIT_BINARY}"
+        ${OPTIONS} --pidfile "${PIDFILE}" --exec "${LUA_BINARY}"
     eend $?
 }

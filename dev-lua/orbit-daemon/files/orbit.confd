@@ -8,9 +8,14 @@
 LUA_PATH="/usr/lib/lua/luarocks/share/lua/5.1//?.lua;/usr/lib/lua/luarocks/share/lua/5.1//?/init.lua;/usr/share/lua/5.1//?.lua;/usr/share/lua/5.1//?/init.lua;/usr/share/lua/5.1//?.lua;/usr/share/lua/5.1//?/init.lua;./?.lua;/usr/local/share/lua/5.1/?.lua;/usr/local/share/lua/5.1/?/init.lua;/usr/local/lib/lua/5.1/?.lua;/usr/local/lib/lua/5.1/?/init.lua;/usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua;$LUA_PATH"
 LUA_CPATH="/usr/lib/lua/luarocks/lib/lua/5.1//?.so;./?.so;/usr/local/lib/lua/5.1/?.so;/usr/lib/lua/5.1/?.so;/usr/local/lib/lua/5.1/loadall.so;$LUA_CPATH"
 
-# Path to the Orbit binary (needs to be absolute path).
-ORBIT_BINARY="/usr/bin/lua"
-ORBIT_OPTIONS="-lluarocks.loader /usr/lib/lua/luarocks/bin/orbit"
+# Path to the Lua binary (needs to be absolute path).
+LUA_BINARY="/usr/bin/lua"
+# Mast require luarocks.loader library.
+LUA_OPTIONS="-lluarocks.loader"
+# Path to the Orbit executable (needs to be absolute path).
+# NOTE: Make sure that actually a service and not just a shell script
+#       that launches services and exits.
+ORBIT_BINARY="/usr/lib/lua/luarocks/lib/luarocks/rocks/orbit/2.1.0-1/bin/orbit"
 # Path to the Orbit application (needs to be absolute path).
 ORBIT_APP="/var/www/kepler/foo/bar.lua"
 # Binds to the specified port (default 8080).
