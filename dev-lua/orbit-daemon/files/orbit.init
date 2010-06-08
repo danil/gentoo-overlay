@@ -7,9 +7,14 @@
 APP_NAME=${SVCNAME#*.}
 PIDFILE_DIR=/var/run/orbit
 PIDFILE=${PIDFILE_DIR}/${APP_NAME}.pid
-#"/home/joo/123/usr/lib/lua/luarocks/lib/luarocks/rocks/orbit/2.1.0-1/bin/orbit"
-#$(expr match "$string" '.*\($substring\)')
-ORBIT_VERSION=${ORBIT_BINARY%*/*}
+# Extracts substring at beginning of string
+# <http://tldp.org/LDP/abs/html/string-manipulation.html#EXPRPAREN>.
+ORBIT_VERSION=$(expr match "$ORBIT_BINARY" '/.*/\([0-9]\.[0-9]\.[0-9][-0-9]*\)/')
+if [ -n "${ORBIT_VERSION}" ]; then
+    ORBIT_NAME="orbit-$ORBIT_VERSION"
+else
+    ORBIT_NAME="orbit"
+fi
 APP_SCRIPTNAME=${ORBIT_APP##*/}
 APP_DIR=${ORBIT_APP%/*}
 
@@ -126,7 +131,7 @@ start() {
         ORBIT_APP_OPTIONS="${ORBIT_APP_OPTIONS} --log=${ORBIT_LOG}"
     fi
 
-    ebegin "Starting orbit-${ORBIT_VERSION} application ${APP_NAME}"
+    ebegin "Starting ${ORBIT_NAME} application ${APP_NAME}"
     export LUA_PATH LUA_CPATH
     cd "${APP_dir}"
     start-stop-daemon --start --background \
@@ -137,7 +142,7 @@ start() {
 }
 
 stop() {
-    ebegin "Stopping orbit-${ORBIT_VERSION} application ${APP_NAME}"
+    ebegin "Stopping ${ORBIT_NAME} application ${APP_NAME}"
     start-stop-daemon --stop \
         ${OPTIONS} --pidfile "${PIDFILE}" --exec "${LUA_BINARY}"
     eend $?
