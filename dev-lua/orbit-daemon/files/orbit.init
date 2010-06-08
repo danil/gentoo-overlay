@@ -53,9 +53,9 @@ checkconfig() {
         return 1
     fi
 
-    if [ ! -x "${ORBIT_BINARY}" ]; then
+    if [ ! -r "${ORBIT_BINARY}" ]; then
         eerror "The file ${ORBIT_BINARY} specified as \$ORBIT_BINARY"
-        eerror "does not exist or is not executable."
+        eerror "does not exist or does not have read permission."
         eerror "Please adjust /etc/conf.d/orbit.${APP_NAME}"
         return 1
     fi
