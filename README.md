@@ -1,7 +1,7 @@
 Danil Kutkevich's Gentoo overlay
 ================================
 
-Copyright (C) 2010 Danil Kutkevich <http://danil.kutkevich.org>
+Copyright (C) 2010 Danil Kutkevich <danil@kutkevich.org>
 
 This Gentoo overlay is free software: you can redistribute it and/or
 modify it under the terms of the GNU General Public License as
