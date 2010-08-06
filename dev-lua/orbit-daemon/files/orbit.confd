@@ -28,7 +28,3 @@ ORBIT_APP="/var/www/kepler/foo/bar.lua"
 # these, the application will be run as root:root.
 ORBIT_USER=orbit
 ORBIT_GROUP=orbit
-
-# Local Variables:
-# mode: conf
-# End:
