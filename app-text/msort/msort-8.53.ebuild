@@ -10,7 +10,7 @@ SRC_URI="http://billposer.org/Software/Downloads/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="
