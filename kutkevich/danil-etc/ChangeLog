@@ -1,0 +1,15 @@
+# ChangeLog for kutkevich/danil-etc
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*danil-etc-9999 (07 Sep 2010)
+
+  07 Sep 2010; Danil Kutkevich <danil@kutkevich.org> +ChangeLog,
+  +Manifest, +danil-etc-9999.ebuild, files/locale.gen,
+  files/make.conf, +metadata.xml:
+  Initial commit.
+
+# Local Variables:
+# mode: fundamental
+# mode: whitespace
+# End:
