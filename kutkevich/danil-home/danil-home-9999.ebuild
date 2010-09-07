@@ -15,4 +15,5 @@ IUSE=""
 src_install() {
 	insinto /home/danil
 	newins "${FILESDIR}"/.emacs .emacs
+	fowners danil:danil .emacs
 }
