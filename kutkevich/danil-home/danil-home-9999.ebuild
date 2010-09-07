@@ -14,5 +14,5 @@ IUSE=""
 
 src_install() {
 	insinto /home/danil
-	newconfd "${FILESDIR}"/.emacs .emacs
+	newins "${FILESDIR}"/.emacs .emacs
 }
