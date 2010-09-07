@@ -15,8 +15,8 @@ IUSE=""
 src_install() {
 	insinto /home/danil
 	newins "${FILESDIR}"/.emacs .emacs
-	fowners danil:danil "${D}"/.emacs
-	lalala="${D}"/.emacs
+	fowners danil:danil "${INSDESTTREE}"/.emacs
+	lalala="${INSDESTTREE}"/.emacs
 }
 
 pkg_postinst() {
