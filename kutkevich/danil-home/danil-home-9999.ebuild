@@ -16,4 +16,9 @@ src_install() {
 	insinto /home/danil
 	newins "${FILESDIR}"/.emacs .emacs
 	fowners danil:danil "${D}"/.emacs
+	lalala="${D}"/.emacs
+}
+
+pkg_postinst() {
+	elog "${lalala}"
 }
