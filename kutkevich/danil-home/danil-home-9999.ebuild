@@ -16,9 +16,13 @@ src_install() {
 	insinto /home/danil
 	newins "${FILESDIR}"/.emacs .emacs
 	fowners danil:danil "${INSDESTTREE}"/.emacs
-	lalala="${INSDESTTREE}"/.emacs
 }
 
 pkg_postinst() {
-	elog "${lalala}"
+	elog "CONFIG_PROTECT variable should contain /home/danil"
+	elog "You can find out about the current CONFIG_PROTECT setting"
+	elog "from the emerge --info output:"
+	elog "  `emerge --info | grep 'CONFIG_PROTECT='`."
+	elog "<http://gentoo.org/doc/en/handbook/handbook-x86.xml?style=printable&part=3&chap=2#doc_chap3>,"
+	elog "man emerge(1) CONFIGURATION FILES."
 }
