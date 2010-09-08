@@ -14,20 +14,20 @@ IUSE="frink homer milhouse revlovejoy"
 
 pkg_setup() {
 	if use !frink && use !milhouse; then
-		eerror 'You must select host. For axample USE="homer"'
-		die
+		die 'You must select host. For axample USE="homer"'
 	fi
 
 	if use frink && use milhouse; then
-		eerror "You may select only one host"
-		die
+		die "You may select only one host"
 	fi
 }
 
 src_install() {
 	if use frink; then
+		MY_HOST="frink"
 		MY_ARCH="amd64"
 	elif use homer || use milhouse || use revlovejoy; then
+		MY_HOST="milhouse"
 		MY_ARCH="x86"
 	fi
 
@@ -36,6 +36,8 @@ src_install() {
 	newins "${FILESDIR}"/make.conf make.conf
 	sed -i \
 		-e "s/@arch@/${MY_ARCH}/g" \
+		-e "s/^# ${MY_HOST}:[ ]*//g" \
+		-e "s/^# [a-z]+: [ ]*/# /g" \
 		"${D}"/etc/make.conf
 
 	newins "${FILESDIR}"/locale.gen locale.gen
