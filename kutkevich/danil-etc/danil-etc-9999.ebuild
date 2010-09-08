@@ -14,11 +14,13 @@ IUSE="frink homer milhouse revlovejoy"
 
 pkg_setup() {
 	if use !frink && use !milhouse; then
-		die "You must select host"
+		eerror 'You must select host. For axample USE="homer"'
+		die
 	fi
 
 	if use frink && use milhouse; then
-		die "You may select only one host"
+		eerror "You may select only one host"
+		die
 	fi
 }
 
