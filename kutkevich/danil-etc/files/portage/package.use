@@ -1,0 +1,50 @@
+app-crypt/pinentry gtk
+app-editors/emacs -X
+app-text/fbreader -qt4 gtk
+dev-libs/pwlib ldap
+games-strategy/freeciv sdl -gtk
+media-sound/moc curl
+media-video/mplayer ftp
+net-libs/libsoup gnome
+sys-fs/udev extras
+x11-libs/qt-gui dbus
+x11-terms/rxvt-unicode -iso14755 -xterm-color
+
+# Git.
+# Enable CVS integration `man gitcvs-migration `.
+dev-vcs/git cvs
+# Enable subversion (version control system) support.
+dev-vcs/git subversion
+dev-vcs/subversion -dso
+
+# docbook2pdf <http://bugs.gentoo.org/61938#c0> used for
+# <http://habrahabr.ru/blogs/Git/80909/>.
+#app-text/docbook-sgml-utils jadetex
+
+# Mutt.
+# `man muttrc`
+mail-client/mutt doc
+
+# Bridging TAP OpenVPN
+# <http://www.gentoo-wiki.info/HOWTO_Road_Warriors_with_OpenVPN#Downloading_and_installing_OpenVPN>.
+net-misc/openvpn iproute2
+
+# Chromium.
+media-video/ffmpeg threads
+
+# nginx.
+www-servers/nginx -nginx_modules_http_geo
+#www-servers/nginx nginx_modules_http_passenger
+
+# Layman Sunrise <http://overlays.gentoo.org/proj/sunrise>.
+#app-portage/layman git subversion
+
+# NTP <http://en.gentoo-wiki.com/wiki/NTP#Installation>.
+net-misc/ntp caps
+
+# Huawei E1550 <http://gentoo.ru/node/17677#comment-127287>,
+# <http://ru.gentoo-wiki.com/wiki/Huawei_E1550_3G_модем#Ppp>.
+net-dialup/ppp dhcp #mppe-mppc
+
+# Lisp/Scheme overlay.
+x11-wm/stumpwm sbcl

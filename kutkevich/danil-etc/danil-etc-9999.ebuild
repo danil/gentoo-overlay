@@ -32,20 +32,20 @@ src_install() {
 	fi
 
 	insinto /etc
-
 	newins "${FILESDIR}"/make.conf make.conf
 	sed -i \
 		-e "s/@arch@/${MY_ARCH}/g" \
 		-e "s/^#${MY_HOST}:[ ]*//g" \
 		"${D}"/etc/make.conf
 
-	newins "${FILESDIR}"/locale.gen locale.gen
-
 	insinto /etc/portage
-
 	newins "${FILESDIR}"/portage/package.keywords package.keywords
 	sed -i \
 		-e "s/@arch@/${MY_ARCH}/g" \
 		-e "s/^#${MY_HOST}:[ ]*//g" \
 		"${D}"/etc/portage/package.keywords
+	newins "${FILESDIR}"/portage/package.use package.use
+
+	insinto /etc
+	newins "${FILESDIR}"/locale.gen locale.gen
 }
