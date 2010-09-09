@@ -12,10 +12,14 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
+MY_OWNER="danil"
+
 src_install() {
 	insinto /home/danil
 	newins "${FILESDIR}"/.emacs .emacs
-	fowners danil:danil "${INSDESTTREE}"/.emacs
+	fowners ${MY_OWNER}:${MY_OWNER} "${INSDESTTREE}"/.emacs
+	newins "${FILESDIR}"/.emacs-aliases.el .emacs-aliases.el
+	fowners ${MY_OWNER}:${MY_OWNER} "${INSDESTTREE}"/.emacs-aliases.el
 }
 
 pkg_postinst() {
