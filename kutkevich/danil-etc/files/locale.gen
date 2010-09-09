@@ -32,11 +32,11 @@
 
 # Danil.
 # <http://ru.gentoo-wiki.com/wiki/Создание_только_нужных_вариантов_locale>,
-# <http://www.gentoo.org/doc/en/guide-localization.xml#doc_chap3_sect4>,
-# <http://www.gentoo.org/doc/en/utf-8.xml#doc_chap2_pre3>,
+# <http://gentoo.org/doc/en/guide-localization.xml?style=printable#doc_chap3_sect4>,
+# <http://gentoo.org/doc/en/utf-8.xml?style=printable#doc_chap2_pre3>,
 # <http://ru.gentoo-wiki.com/wiki/Полная_поддержка_русского_языка#.D0.A1.D0.BE.D0.B7.D0.B4.D0.B0.D0.BD.D0.B8.D0.B5_.D0.BB.D0.BE.D0.BA.D0.B0.D0.BB.D0.B8>,
 # <http://ru.gentoo-wiki.com/wiki/Частичная_поддержка_русского_языка#.D0.9D.D0.B0.D1.81.D1.82.D1.80.D0.BE.D0.B9.D0.BA.D0.B0>,
-# <http://www.gentoo.org/doc/en/gentoo-x86-quickinstall.xml#doc_chap2_pre35>.
+# <http://gentoo.org/doc/en/gentoo-x86-quickinstall.xml?style=printable#doc_chap2_pre35>.
 en_US.UTF-8 UTF-8
 ru_RU.UTF-8 UTF-8
 ru_RU.KOI8-R KOI8-R
