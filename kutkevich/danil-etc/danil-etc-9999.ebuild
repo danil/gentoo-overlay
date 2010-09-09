@@ -39,11 +39,13 @@ src_install() {
 		-e "s/^#${MY_HOST}:[ ]*//g" \
 		"${D}"/etc/make.conf
 
-	newins "${FILESDIR}"/portage/package.keywords portage/package.keywords
+	newins "${FILESDIR}"/locale.gen locale.gen
+
+	insinto /etc/portage
+
+	newins "${FILESDIR}"/portage/package.keywords package.keywords
 	sed -i \
 		-e "s/@arch@/${MY_ARCH}/g" \
 		-e "s/^#${MY_HOST}:[ ]*//g" \
 		"${D}"/etc/portage/package.keywords
-
-	newins "${FILESDIR}"/locale.gen locale.gen
 }
