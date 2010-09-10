@@ -32,6 +32,10 @@ src_install() {
 	fi
 
 	insinto /etc
+	newins "${FILESDIR}"/hosts hosts
+	sed -i \
+		-e "s/^#${MY_HOST}:[ ]*//g" \
+		"${D}"/etc/hosts
 	newins "${FILESDIR}"/make.conf make.conf
 	sed -i \
 		-e "s/@arch@/${MY_ARCH}/g" \
