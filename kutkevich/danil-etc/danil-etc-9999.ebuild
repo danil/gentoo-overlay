@@ -45,6 +45,9 @@ src_install() {
 		-e "s/^#${MY_HOST}:[ ]*//g" \
 		"${D}"/etc/portage/package.keywords
 	newins "${FILESDIR}"/portage/package.unmask package.unmask
+	sed -i \
+		-e "s/^#${MY_HOST}:[ ]*//g" \
+		"${D}"/etc/portage/package.unmask
 	newins "${FILESDIR}"/portage/package.use package.use
 
 	insinto /etc
