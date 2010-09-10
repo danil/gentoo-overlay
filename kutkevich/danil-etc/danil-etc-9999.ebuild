@@ -44,6 +44,7 @@ src_install() {
 		-e "s/@arch@/${MY_ARCH}/g" \
 		-e "s/^#${MY_HOST}:[ ]*//g" \
 		"${D}"/etc/portage/package.keywords
+	newins "${FILESDIR}"/portage/package.unmask package.unmask
 	newins "${FILESDIR}"/portage/package.use package.use
 
 	insinto /etc
