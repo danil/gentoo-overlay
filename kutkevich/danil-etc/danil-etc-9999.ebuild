@@ -57,5 +57,5 @@ src_install() {
 	insinto /etc
 	newins "${FILESDIR}"/locale.gen locale.gen
 
-	newconfd "${FILESDIR}"/consolefont consolefont
+	newconfd "${FILESDIR}"/conf.d/consolefont consolefont
 }
