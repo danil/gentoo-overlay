@@ -34,8 +34,7 @@ src_install() {
 	newconfd "${FILESDIR}"/conf.d/consolefont consolefont
 	newconfd "${FILESDIR}"/conf.d/keymaps keymaps
 
-	insinto /etc/env.d
-	newins "${FILESDIR}"/02locale 02locale
+	newenvd "${FILESDIR}"/env.d/02locale 02locale
 
 	insinto /etc
 	newins "${FILESDIR}"/fstab fstab
