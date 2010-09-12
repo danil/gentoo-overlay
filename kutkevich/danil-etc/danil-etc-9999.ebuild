@@ -46,6 +46,9 @@ src_install() {
 		-e "s/^#${MY_HOST}:[ ]*//g" \
 		"${D}"/etc/hosts
 
+	insinto /etc/layman
+	newins "${FILESDIR}"/layman/layman.cfg layman.cfg
+
 	insinto /etc
 	newins "${FILESDIR}"/locale.gen locale.gen
 	newins "${FILESDIR}"/make.conf make.conf
