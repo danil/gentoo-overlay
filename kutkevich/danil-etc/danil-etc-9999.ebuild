@@ -33,6 +33,11 @@ src_install() {
 
 	insinto /etc
 	newins "${FILESDIR}"/hosts hosts
+
+	newconfd "${FILESDIR}"/conf.d/consolefont consolefont
+	newconfd "${FILESDIR}"/conf.d/keymaps keymaps
+
+	insinto /etc
 	sed -i \
 		-e "s/^#${MY_HOST}:[ ]*//g" \
 		"${D}"/etc/hosts
@@ -56,6 +61,4 @@ src_install() {
 
 	insinto /etc
 	newins "${FILESDIR}"/locale.gen locale.gen
-
-	newconfd "${FILESDIR}"/conf.d/consolefont consolefont
 }
