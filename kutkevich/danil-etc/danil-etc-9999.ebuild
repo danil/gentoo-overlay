@@ -31,20 +31,24 @@ src_install() {
 		MY_ARCH="x86"
 	fi
 
+	newconfd "${FILESDIR}"/conf.d/consolefont consolefont
+	newconfd "${FILESDIR}"/conf.d/keymaps keymaps
+
+	insinto /etc/env.d
+	newins "${FILESDIR}"/02locale 02locale
+
 	insinto /etc
-	newins "${FILESDIR}"/hosts hosts
-	sed -i \
-		-e "s/^#${MY_HOST}:[ ]*//g" \
-		"${D}"/etc/hosts
 	newins "${FILESDIR}"/fstab fstab
 	sed -i \
 		-e "s/^#${MY_HOST}:[ ]*//g" \
 		"${D}"/etc/fstab
-
-	newconfd "${FILESDIR}"/conf.d/consolefont consolefont
-	newconfd "${FILESDIR}"/conf.d/keymaps keymaps
+	newins "${FILESDIR}"/hosts hosts
+	sed -i \
+		-e "s/^#${MY_HOST}:[ ]*//g" \
+		"${D}"/etc/hosts
 
 	insinto /etc
+	newins "${FILESDIR}"/locale.gen locale.gen
 	newins "${FILESDIR}"/make.conf make.conf
 	sed -i \
 		-e "s/@arch@/${MY_ARCH}/g" \
@@ -62,7 +66,4 @@ src_install() {
 		-e "s/^#${MY_HOST}:[ ]*//g" \
 		"${D}"/etc/portage/package.unmask
 	newins "${FILESDIR}"/portage/package.use package.use
-
-	insinto /etc
-	newins "${FILESDIR}"/locale.gen locale.gen
 }
