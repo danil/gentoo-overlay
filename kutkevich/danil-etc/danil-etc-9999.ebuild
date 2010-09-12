@@ -33,14 +33,18 @@ src_install() {
 
 	insinto /etc
 	newins "${FILESDIR}"/hosts hosts
+	sed -i \
+		-e "s/^#${MY_HOST}:[ ]*//g" \
+		"${D}"/etc/hosts
+	newins "${FILESDIR}"/fstab fstab
+	sed -i \
+		-e "s/^#${MY_HOST}:[ ]*//g" \
+		"${D}"/etc/fstab
 
 	newconfd "${FILESDIR}"/conf.d/consolefont consolefont
 	newconfd "${FILESDIR}"/conf.d/keymaps keymaps
 
 	insinto /etc
-	sed -i \
-		-e "s/^#${MY_HOST}:[ ]*//g" \
-		"${D}"/etc/hosts
 	newins "${FILESDIR}"/make.conf make.conf
 	sed -i \
 		-e "s/@arch@/${MY_ARCH}/g" \
