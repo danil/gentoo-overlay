@@ -6,6 +6,7 @@ games-strategy/freeciv sdl -gtk
 media-sound/moc curl
 media-video/mplayer ftp
 net-libs/libsoup gnome
+net-print/cups gnutls
 sys-fs/udev extras
 x11-libs/qt-gui dbus
 x11-terms/rxvt-unicode -iso14755 -xterm-color
