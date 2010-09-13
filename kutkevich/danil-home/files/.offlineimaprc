@@ -1,0 +1,45 @@
+# This file is part of Danil Kutkevich <danil@kutkevich.org> home.
+[general]
+metadata = ~/.offlineimap
+accounts = GMAIL
+# Max number of concurrent connections.
+#maxsyncaccounts = 2
+
+# UI.
+#ui = Curses.Blinkenlights
+#ui = Machine.MachineUI
+ui = Noninteractive.Basic
+#ui = Noninteractive.Quiet
+#ui = TTY.TTYUI
+
+# GMAIL Account Settings.
+[Account GMAIL]
+localrepository = LocalGmail
+remoterepository = RemoteGmail
+# Minutes until next sync.
+#autorefresh = 10
+# Number of 'quick' syncs between full syncs, saves time.
+#quick = 5
+
+[Repository LocalGmail]
+# Format of the local repository. choose Maildir if you will use Mutt.
+type = Maildir
+# Location of the email.
+localfolders = ~/.maildb/GMAIL
+# Don't let offlineimap touch the atime of files.
+restoreatime = no
+
+[Repository RemoteGmail]
+type = IMAP
+remotehost = imap.gmail.com
+ssl = yes
+remoteuser = danil@kutkevich.org
+remotepass = gmail_com_danil_kutkevich_org
+folderfilter = lambda foldername: foldername not in ['[Gmail]/All Mail', '[Gmail]/Starred', 'imapfilter_trash']
+realdelete = no
+trashfolder = [Gmail]/Trash
+spamfolder = [Gmail]/Spam
+
+# Local Variables:
+# mode: conf
+# End:

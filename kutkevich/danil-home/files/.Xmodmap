@@ -1,0 +1,12 @@
+! This file is part of Danil Kutkevich <danil@kutkevich.org> home.
+! Swap Caps_Lock and Control_L
+! <http://emacswiki.org/EmacsCrashTips#toc1>,
+! <http://emacswiki.org/MovingTheCtrlKey#toc3>.
+! <http://columbia.edu/~djv/docs/keyremap.html>.
+! Make the Caps Lock key be a Control key.
+remove Lock = Caps_Lock
+add Control = Caps_Lock
+
+! Make the Left Control key be a Caps Lock key.
+! remove Control = Control_L
+! add Lock = Control_L

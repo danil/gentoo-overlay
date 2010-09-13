@@ -20,9 +20,7 @@ pkg_setup() {
 	if use frink && use milhouse; then
 		die "You may select only one host"
 	fi
-}
 
-src_install() {
 	if use frink; then
 		MY_HOST="frink"
 		MY_ARCH="amd64"
@@ -30,27 +28,28 @@ src_install() {
 		MY_HOST="milhouse"
 		MY_ARCH="x86"
 	fi
+}
 
+src_install() {
 	newconfd "${FILESDIR}"/conf.d/consolefont consolefont
 	newconfd "${FILESDIR}"/conf.d/keymaps keymaps
 
 	newenvd "${FILESDIR}"/env.d/02locale 02locale
 
 	insinto /etc
+
 	newins "${FILESDIR}"/fstab fstab
 	sed -i \
 		-e "s/^#${MY_HOST}:[ ]*//g" \
 		"${D}"/etc/fstab
+
 	newins "${FILESDIR}"/hosts hosts
 	sed -i \
 		-e "s/^#${MY_HOST}:[ ]*//g" \
 		"${D}"/etc/hosts
 
-	insinto /etc/layman
-	newins "${FILESDIR}"/layman/layman.cfg layman.cfg
-
-	insinto /etc
 	newins "${FILESDIR}"/locale.gen locale.gen
+
 	newins "${FILESDIR}"/make.conf make.conf
 	sed -i \
 		-e "s/@arch@/${MY_ARCH}/g" \
@@ -58,14 +57,21 @@ src_install() {
 		"${D}"/etc/make.conf
 
 	insinto /etc/portage
+
 	newins "${FILESDIR}"/portage/package.keywords package.keywords
 	sed -i \
 		-e "s/@arch@/${MY_ARCH}/g" \
 		-e "s/^#${MY_HOST}:[ ]*//g" \
 		"${D}"/etc/portage/package.keywords
+
 	newins "${FILESDIR}"/portage/package.unmask package.unmask
 	sed -i \
 		-e "s/^#${MY_HOST}:[ ]*//g" \
 		"${D}"/etc/portage/package.unmask
+
 	newins "${FILESDIR}"/portage/package.use package.use
+
+	insinto /etc/layman
+
+	newins "${FILESDIR}"/layman/layman.cfg layman.cfg
 }
