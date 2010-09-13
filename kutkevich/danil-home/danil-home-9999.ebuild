@@ -10,7 +10,7 @@ HOMEPAGE="http://git.kutkevich.org/gentoo-overlay.git"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE=""
+IUSE="frink homer milhouse revlovejoy"
 
 MY_OWNER="danil"
 
