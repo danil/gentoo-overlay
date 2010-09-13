@@ -67,6 +67,7 @@ src_install() {
 	sed -i \
 		-e "s/gmail_com_danil_kutkevich_org/${gmail_com_danil_kutkevich_org}/g" \
 		"${D}"/home/danil/.msmtprc
+	fperms 600 "${INSDESTTREE}"/.msmtprc
 
 	newins "${FILESDIR}"/.muttrc .muttrc
 	fowners ${MY_OWNER}:${MY_OWNER} "${INSDESTTREE}"/.muttrc
@@ -82,6 +83,7 @@ src_install() {
 	sed -i \
 		-e "s/gmail_com_danil_kutkevich_org/${gmail_com_danil_kutkevich_org}/g" \
 		"${D}"/home/danil/.offlineimaprc
+	fperms 600 "${INSDESTTREE}"/.offlineimaprc
 
 	newins "${FILESDIR}"/.ratpoisonrc .ratpoisonrc
 	fowners ${MY_OWNER}:${MY_OWNER} "${INSDESTTREE}"/.ratpoisonrc
@@ -132,6 +134,7 @@ src_install() {
 		-e "s/BitlBee_danil/${BitlBee_danil}/g" \
 		-e "s/Freenode_danilkutkevich/${Freenode_danilkutkevich}/g" \
 		"${D}"/home/danil/.irssi/config
+	fperms 600 "${INSDESTTREE}"/config
 
 	insinto /home/danil/.moc
 
