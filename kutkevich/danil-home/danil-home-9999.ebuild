@@ -34,10 +34,10 @@ pkg_setup() {
 		MY_ARCH="x86"
 	fi
 
-	if [ -r ~/org/a/a ]; then
-		source ~/org/a/a
+	if [ -r /home/${MY_OWNER}/org/a/a ]; then
+		source /home/${MY_OWNER}/org/a/a
 	else
-		die "~/org/a/a does not exist or does not have read permission."
+		die "/home/${MY_OWNER}/org/a/a does not exist or does not have read permission."
 	fi
 }
 
