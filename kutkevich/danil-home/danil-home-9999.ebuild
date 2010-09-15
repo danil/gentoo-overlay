@@ -49,6 +49,8 @@ src_install() {
 				-e "s/gmail_com_danil_kutkevich_org/${gmail_com_danil_kutkevich_org}/g" \
 				-e "s/BitlBee_danil/${BitlBee_danil}/g" \
 				-e "s/Freenode_danilkutkevich/${Freenode_danilkutkevich}/g"
+
+	emake DESTDIR="${D}" install || die "make install failed"
 }
 
 pkg_postinst() {
