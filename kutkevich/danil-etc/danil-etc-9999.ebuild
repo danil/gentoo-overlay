@@ -7,7 +7,7 @@ inherit eutils
 DESCRIPTION="Danil Kutkevich's <danil@kutkevich.org> configuration files"
 HOMEPAGE="http://git.kutkevich.org/gentoo-overlay.git"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="frink homer milhouse revlovejoy"
