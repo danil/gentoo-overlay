@@ -50,7 +50,7 @@ src_install() {
 				-e "s/BitlBee_danil/${BitlBee_danil}/g" \
 				-e "s/Freenode_danilkutkevich/${Freenode_danilkutkevich}/g"
 
-	dodir /home/${MY_OWNER}
+	dodir /home
 	emake DESTDIR="${D}" install || die "make install failed"
 }
 
