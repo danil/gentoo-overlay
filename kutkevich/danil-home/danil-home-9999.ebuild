@@ -42,6 +42,8 @@ pkg_setup() {
 }
 
 src_install() {
+	emake install || die "emake install failed"
+
 	find "${D}" -type f \
 		|xargs sed -i \
 				-e "s/^#${MY_HOST}:[ ]*//g" \
