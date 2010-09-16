@@ -42,16 +42,16 @@ pkg_setup() {
 }
 
 src_install() {
-	elog "${T}/home/danil/123/321"
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	find "${D}" -type f \
-		|xargs sed -i \
-				-e "s/^#${MY_HOST}:[ ]*//g" \
-				-e "s/gmail_com_danil_kutkevich_org/${gmail_com_danil_kutkevich_org}/g" \
-				-e "s/gmail_com_danil_kutkevich_org/${gmail_com_danil_kutkevich_org}/g" \
-				-e "s/BitlBee_danil/${BitlBee_danil}/g" \
-				-e "s/Freenode_danilkutkevich/${Freenode_danilkutkevich}/g"
+	find "${D}" -type f -exec \
+		sed -i \
+			-e "s/^#${MY_HOST}:[ ]*//g" \
+			-e "s/@gmail_com_danil_kutkevich_org@/${gmail_com_danil_kutkevich_org}/g" \
+			-e "s/@gmail_com_danil_kutkevich_org@/${gmail_com_danil_kutkevich_org}/g" \
+			-e "s/@BitlBee_danil@/${BitlBee_danil}/g" \
+			-e "s/@Freenode_danilkutkevich@/${Freenode_danilkutkevich}/g"
+			'{}' \;
 }
 
 pkg_postinst() {
