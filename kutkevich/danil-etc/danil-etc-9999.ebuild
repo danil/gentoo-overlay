@@ -40,6 +40,9 @@ src_install() {
 	dodir /etc
 	cp -ra "${S}/files/etc" "${D}/" || die "failed to install files"
 
+	dodir /usr
+	cp -ra "${S}/files/usr" "${D}/" || die "failed to install files"
+
 	newconfd "${FILESDIR}"/conf.d/consolefont consolefont
 	newconfd "${FILESDIR}"/conf.d/keymaps keymaps
 	newconfd "${FILESDIR}"/conf.d/xdm xdm
