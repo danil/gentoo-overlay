@@ -42,6 +42,7 @@ pkg_setup() {
 }
 
 src_install() {
+	mkdir -p "${T}/home/danil/123/321" || die "mkdir home failed"
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	find "${D}" -type f \
