@@ -42,8 +42,8 @@ pkg_setup() {
 }
 
 src_install() {
-	keepdir /home/danil
-	insinto /home/danil
+	keepdir /home/danil/123
+	insinto /home/danil/123
 	doins files/*
 
 	find "${D}" -type f -exec \
