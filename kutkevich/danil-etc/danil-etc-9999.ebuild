@@ -65,7 +65,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "CONFIG_PROTECT variable should contain /etc/env.d"
+	elog "CONFIG_PROTECT variable should contain /etc/env.d and /boot"
 	elog "You can find out about the current CONFIG_PROTECT setting"
 	elog "from the emerge --info output:"
 	elog "  `emerge --info | grep CONFIG_PROTECT`."
