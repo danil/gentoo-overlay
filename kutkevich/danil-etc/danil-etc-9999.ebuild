@@ -75,3 +75,12 @@ src_install() {
 
 	newins "${FILESDIR}"/layman/layman.cfg layman.cfg
 }
+
+pkg_postinst() {
+	elog "CONFIG_PROTECT variable should contain /etc/env.d"
+	elog "You can find out about the current CONFIG_PROTECT setting"
+	elog "from the emerge --info output:"
+	elog "  `emerge --info | grep CONFIG_PROTECT`."
+	elog "<http://gentoo.org/doc/en/handbook/handbook-x86.xml?style=printable&part=3&chap=2#doc_chap3>,"
+	elog "man emerge(1) CONFIGURATION FILES."
+}
