@@ -42,9 +42,10 @@ pkg_setup() {
 }
 
 src_install() {
-	keepdir /home/danil/123
+	dodir /home/danil/123
 	insinto /home/danil/123
-	doins "${S}"/files/*
+	doins files/*
+	fowners -R ${MY_OWNER}:${MY_OWNER} "${INSDESTTREE}"/123
 
 	find "${D}" -type f -exec \
 		sed -i \
