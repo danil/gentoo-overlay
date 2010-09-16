@@ -43,7 +43,8 @@ pkg_setup() {
 
 src_install() {
 	keepdir /home/danil
-	cp -ra "${S}/files/*" "${D}/home/danil" || die "failed to install files"
+	insinto /home/danil
+	doins files/*
 
 	find "${D}" -type f -exec \
 		sed -i \
