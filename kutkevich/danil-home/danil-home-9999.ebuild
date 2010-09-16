@@ -42,7 +42,7 @@ pkg_setup() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	cp -a "${S}/files" "${D}/home/danil" || die "failed to install files"
 
 	find "${D}" -type f -exec \
 		sed -i \
