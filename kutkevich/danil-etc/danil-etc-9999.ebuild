@@ -42,6 +42,7 @@ src_install() {
 
 	newconfd "${FILESDIR}"/conf.d/consolefont consolefont
 	newconfd "${FILESDIR}"/conf.d/keymaps keymaps
+	newconfd "${FILESDIR}"/conf.d/xdm xdm
 
 	newenvd "${FILESDIR}"/env.d/02locale 02locale
 
