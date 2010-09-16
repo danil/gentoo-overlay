@@ -44,8 +44,8 @@ pkg_setup() {
 src_install() {
 	dodir /home/danil/123
 	insinto /home/danil/123
-	doins files/*
-	fowners -R ${MY_OWNER}:${MY_OWNER} "${INSDESTTREE}"/123
+	doins "${S}"/files/*
+	fowners -R ${MY_OWNER}:${MY_OWNER} 123
 
 	find "${D}" -type f -exec \
 		sed -i \
