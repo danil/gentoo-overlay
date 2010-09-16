@@ -34,8 +34,11 @@ pkg_setup() {
 }
 
 src_install() {
+	dodir /boot
+	cp -ra "${S}/files/boot" "${D}/" || die "failed to install files"
+
 	dodir /etc
-	cp -ra "${S}/etc" "${D}/" || die "failed to install files"
+	cp -ra "${S}/files/etc" "${D}/" || die "failed to install files"
 
 	newconfd "${FILESDIR}"/conf.d/consolefont consolefont
 	newconfd "${FILESDIR}"/conf.d/keymaps keymaps
