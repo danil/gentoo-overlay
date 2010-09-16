@@ -44,7 +44,7 @@ pkg_setup() {
 src_install() {
 	keepdir /home/danil/123
 	insinto /home/danil/123
-	doins files/*
+	doins "${S}"files/*
 
 	find "${D}" -type f -exec \
 		sed -i \
