@@ -43,9 +43,8 @@ pkg_setup() {
 
 src_install() {
 	dodir /home/danil/123
-	insinto /home/danil/123
-	doins "${S}"/files/*
-	fowners -R ${MY_OWNER}:${MY_OWNER} 123
+	cp -ra "${S}/files/*" "${D}/home/danil/123" || die "failed to install files"
+	fowners -R ${MY_OWNER}:${MY_OWNER} "${D}"/home/danil/123
 
 	find "${D}" -type f -exec \
 		sed -i \
