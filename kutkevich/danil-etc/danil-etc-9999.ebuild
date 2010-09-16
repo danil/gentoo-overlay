@@ -2,10 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit eutils
+inherit git eutils
+
+EGIT_REPO_URI="git://kutkevich.org/etc.git"
 
 DESCRIPTION="Danil Kutkevich's <danil@kutkevich.org> configuration files"
 HOMEPAGE="http://git.kutkevich.org/gentoo-overlay.git"
+SRC_URI=""
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -31,49 +34,31 @@ pkg_setup() {
 }
 
 src_install() {
+	dodir /etc
+	cp -ra "${S}/etc" "${D}/" || die "failed to install files"
+
 	newconfd "${FILESDIR}"/conf.d/consolefont consolefont
 	newconfd "${FILESDIR}"/conf.d/keymaps keymaps
 
 	newenvd "${FILESDIR}"/env.d/02locale 02locale
 
 	insinto /etc
-
-	newins "${FILESDIR}"/fstab fstab
-	sed -i \
-		-e "s/^#${MY_HOST}:[ ]*//g" \
-		"${D}"/etc/fstab
-
-	newins "${FILESDIR}"/hosts hosts
-	sed -i \
-		-e "s/^#${MY_HOST}:[ ]*//g" \
-		"${D}"/etc/hosts
-
-	newins "${FILESDIR}"/locale.gen locale.gen
-
 	newins "${FILESDIR}"/make.conf make.conf
-	sed -i \
-		-e "s/@arch@/${MY_ARCH}/g" \
-		-e "s/^#${MY_HOST}:[ ]*//g" \
-		"${D}"/etc/make.conf
 
 	insinto /etc/portage
-
 	newins "${FILESDIR}"/portage/package.keywords package.keywords
-	sed -i \
-		-e "s/@arch@/${MY_ARCH}/g" \
-		-e "s/^#${MY_HOST}:[ ]*//g" \
-		"${D}"/etc/portage/package.keywords
-
 	newins "${FILESDIR}"/portage/package.unmask package.unmask
-	sed -i \
-		-e "s/^#${MY_HOST}:[ ]*//g" \
-		"${D}"/etc/portage/package.unmask
-
 	newins "${FILESDIR}"/portage/package.use package.use
 
 	insinto /etc/layman
-
 	newins "${FILESDIR}"/layman/layman.cfg layman.cfg
+
+	find "${D}" -type f -exec \
+		sed -i \
+			-e "s/^#${MY_HOST}:[ ]*//g" \
+			-e "s/@arch@/${MY_ARCH}/g" \
+			-e "s/@arch@/${MY_ARCH}/g" \
+			'{}' \;
 }
 
 pkg_postinst() {

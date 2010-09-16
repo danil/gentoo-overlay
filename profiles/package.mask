@@ -31,6 +31,7 @@
 
 # Danil Kutkevich <danil@kutkevich.org> (9 May 2010)
 # Masking these versions because is a live ebuilds (svn) checkout
+=kutkevich/danil-etc-9999
 =kutkevich/danil-home-9999
 =net-wireless/madwifi-hal-0.10.5.6.9999
 =net-wireless/madwifi-hal-tools-0.10.5.6.9999
