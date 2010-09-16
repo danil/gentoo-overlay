@@ -42,9 +42,9 @@ pkg_setup() {
 }
 
 src_install() {
-	dodir /home/danil/files
-	cp -ra "${S}/files" "${D}/home/danil/" || die "failed to install files"
-	fowners -R ${MY_OWNER}:${MY_OWNER} /home/danil/files
+	dodir /home/danil
+	cp -ra "${S}/danil" "${D}/home/" || die "failed to install files"
+	fowners -R ${MY_OWNER}:${MY_OWNER} /home/danil
 
 	find "${D}" -type f -exec \
 		sed -i \
