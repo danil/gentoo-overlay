@@ -42,8 +42,8 @@ pkg_setup() {
 }
 
 src_install() {
-	install --directory "${D}/home/danil"
-	cp -a "${S}/files" "${D}/home/danil" || die "failed to install files"
+	keepdir /home/danil
+	cp -ra "${S}/files/*" "${D}/home/danil" || die "failed to install files"
 
 	find "${D}" -type f -exec \
 		sed -i \
