@@ -2,7 +2,7 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
-*danil-etca-9999 (16 Sep 2010)
+*danil-etc-9999 (16 Sep 2010)
 
   16 Sep 2010; Danil Kutkevich <danil@kutkevich.org>
   danil-etc-9999.ebuild, -files/fstab, -files/hosts,
