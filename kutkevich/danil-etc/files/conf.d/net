@@ -40,6 +40,8 @@ modules=( "wpa_supplicant" )
 # <http://en.gentoo-wiki.com/wiki/NTP#DHCP>,
 # <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&chap=3&style=printable#dhcp>.
 #frink:    dhcp_wlan0=( "nontp" )
+# <http://en.gentoo-wiki.com/wiki/Wireless/Configuration#Configuring_.2Fetc.2Fconf.d.2Fnet>.
+#frink:    dhcpcd_wlan0="-t 30" # Timeout after 30 seconds
 #milhouse: dhcp_ath0=( "nontp" )
 
 # Defining network configuration per ESSID
