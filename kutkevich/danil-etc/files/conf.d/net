@@ -23,7 +23,8 @@ modules=( "wpa_supplicant" )
 #modules=( "iwconfig" )
 
 # <http://en.gentoo-wiki.com/wiki/Wireless_Networking#Needed_software>.
-# #frink: wpa_timeout_wlan0=15
+#frink:    wpa_timeout_wlan0=15
+# #milhouse: wpa_timeout_ath0=15
 
 # It's important that we tell wpa_supplicant which driver we should be
 # using as it's not very good at guessing yet
