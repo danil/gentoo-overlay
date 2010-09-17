@@ -1,0 +1,5 @@
+# Emacs daemon crashes.
+#=app-emacs/emacs-daemon-0.17
+
+# Epiphany slow.
+#=www-client/epiphany-2.26.3-r4

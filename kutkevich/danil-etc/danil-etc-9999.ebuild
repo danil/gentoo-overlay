@@ -56,6 +56,7 @@ src_install() {
 
 	insinto /etc/portage
 	newins "${FILESDIR}"/portage/package.keywords package.keywords
+	newins "${FILESDIR}"/portage/package.mask package.mask
 	newins "${FILESDIR}"/portage/package.unmask package.unmask
 	newins "${FILESDIR}"/portage/package.use package.use
 
