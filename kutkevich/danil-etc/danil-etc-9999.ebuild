@@ -47,6 +47,7 @@ src_install() {
 	newconfd "${FILESDIR}"/conf.d/emacs.danil emacs.danil
 	newconfd "${FILESDIR}"/conf.d/keymaps keymaps
 	newconfd "${FILESDIR}"/conf.d/net net
+	newconfd "${FILESDIR}"/conf.d/rc rc
 	newconfd "${FILESDIR}"/conf.d/xdm xdm
 
 	newenvd "${FILESDIR}"/env.d/02locale 02locale
