@@ -46,7 +46,7 @@ RC_COLDPLUG="yes"
 # Danil.
 #RC_PLUG_SERVICES=""
 # <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=2&chap=4#doc_chap5_pre3>.
-RC_PLUG_SERVICES="!net.*"
+RC_PLUG_SERVICES="!net.eth0 !net.wlan0 !net.ath0"
 
 # RC_NET_STRICT_CHECKING allows some flexibility with the 'net' service.
 # The following values are allowed:
