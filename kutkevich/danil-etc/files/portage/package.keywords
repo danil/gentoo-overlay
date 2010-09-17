@@ -62,7 +62,7 @@
 # StumpWM.
 #=x11-wm/stumpwm-0.9.6-r3 ~@arch@
 =x11-wm/stumpwm-0.9.7 ~@arch@
-=dev-lisp/cl-launch-2.36 ~@arch@
+#=dev-lisp/cl-launch-2.36 ~@arch@
 #=dev-lisp/sbcl-1.0.38-r1 ~@arch@
 =dev-lisp/sbcl-1.0.36-r1 ~@arch@
 =dev-lisp/clx-0.7.4 ~@arch@
