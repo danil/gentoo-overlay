@@ -44,7 +44,9 @@ src_install() {
 	cp -ra "${S}/files/usr" "${D}/" || die "failed to install files"
 
 	newconfd "${FILESDIR}"/conf.d/consolefont consolefont
+	newconfd "${FILESDIR}"/conf.d/emacs.danil emacs.danil
 	newconfd "${FILESDIR}"/conf.d/keymaps keymaps
+	newconfd "${FILESDIR}"/conf.d/net net
 	newconfd "${FILESDIR}"/conf.d/xdm xdm
 
 	newenvd "${FILESDIR}"/env.d/02locale 02locale
