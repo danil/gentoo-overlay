@@ -22,10 +22,14 @@ dhcp_eth0=( "nontp" )
 modules=( "wpa_supplicant" )
 #modules=( "iwconfig" )
 
+# <http://en.gentoo-wiki.com/wiki/Wireless_Networking#Needed_software>.
+# #frink: wpa_timeout_wlan0=15
+
 # It's important that we tell wpa_supplicant which driver we should be
-# using as it's not very good at guessing yet.
+# using as it's not very good at guessing yet
+# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&chap=4&style=printable#doc_chap2_pre2>.
+#frink:    wpa_supplicant_wlan0="-Dwext"
 # <http://old.nabble.com/ath5k-and-wpa_supplicant-td23816188.html#a23818570>.
-# #frink:    wpa_supplicant_wlan0="-Dwext"
 #milhouse: wpa_supplicant_ath0="-Dwext"
 
 # DHCP
