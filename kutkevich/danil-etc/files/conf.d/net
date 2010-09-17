@@ -5,11 +5,11 @@
 
 # Danil.
 # Wired
-# <http://gentoo.org/doc/en/gentoo-x86-quickinstall.xml#doc_chap2_pre21>,
-# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=8#doc_chap2_sect2>.
+# <http://gentoo.org/doc/en/gentoo-x86-quickinstall.xml?style=printable#doc_chap2_pre21>,
+# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=8&style=printable#doc_chap2_sect2>.
 config_eth0=( "dhcp" )
 # <http://en.gentoo-wiki.com/wiki/NTP#DHCP>,
-# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&chap=3#dhcp>.
+# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&chap=3&style=printable#dhcp>.
 dhcp_eth0=( "nontp" )
 # #frink:    config_eth0=( "192.168.8.15/24" )
 # #milhouse: config_eth0=( "192.168.8.13/24" )
@@ -17,7 +17,7 @@ dhcp_eth0=( "nontp" )
 
 # Wireless.
 # WPA Supplicant
-# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&chap=4#doc_chap2_pre2>.
+# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&chap=4&style=printable#doc_chap2_pre2>.
 # Prefer wpa_supplicant over wireless-tools.
 modules=( "wpa_supplicant" )
 #modules=( "iwconfig" )
@@ -25,18 +25,21 @@ modules=( "wpa_supplicant" )
 # It's important that we tell wpa_supplicant which driver we should be
 # using as it's not very good at guessing yet.
 # <http://old.nabble.com/ath5k-and-wpa_supplicant-td23816188.html#a23818570>.
-wpa_supplicant_eth0="-Dwext"
+# #frink:    wpa_supplicant_wlan0="-Dwext"
+#milhouse: wpa_supplicant_ath0="-Dwext"
 
 # DHCP
-# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&chap=3#dhcp>.
-config_ath0=( "dhcp" )
+# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&chap=3&style=printable#dhcp>.
+#frink:    config_wlan0=( "dhcp" )
+#milhouse: config_ath0=( "dhcp" )
 # <http://en.gentoo-wiki.com/wiki/NTP#DHCP>,
-# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&chap=3#dhcp>.
-dhcp_ath0=( "nontp" )
+# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&chap=3&style=printable#dhcp>.
+#frink:    dhcp_wlan0=( "nontp" )
+#milhouse: dhcp_ath0=( "nontp" )
 
 # Defining network configuration per ESSID
-# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&chap=4#doc_chap4>,
-# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&chap=2#variable_name>.
+# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&chap=4&style=printable#doc_chap4>,
+# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&chap=2&style=printable#variable_name>.
 
 # tatyana.
 #config_tatyana=( "dhcp" )
@@ -48,7 +51,7 @@ dhcp_ath0=( "nontp" )
 # dns_search_domains_tatyana=( "tat" )
 
 # Wireless Tools
-# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&chap=4#doc_chap3_pre2>.
+# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&chap=4&style=printable#doc_chap3_pre2>.
 # Configure WEP keys for Access Points called ESSID1 and ESSID2
 # You may configure up to 4 WEP keys, but only 1 can be active at
 # any time so we supply a default index of [1] to set key [1] and then
