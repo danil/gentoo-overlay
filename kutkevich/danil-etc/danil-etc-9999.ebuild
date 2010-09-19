@@ -31,6 +31,12 @@ pkg_setup() {
 		MY_HOST="milhouse"
 		MY_ARCH="x86"
 	fi
+
+	if [ -r /home/${MY_OWNER}/org/a/a ]; then
+		source /home/${MY_OWNER}/org/a/a
+	else
+		die "/home/${MY_OWNER}/org/a/a does not exist or does not have read permission."
+	fi
 }
 
 src_install() {
@@ -68,7 +74,14 @@ src_install() {
 		sed -i \
 			-e "s/^#${MY_HOST}:[ ]*//g" \
 			-e "s/@arch@/${MY_ARCH}/g" \
-			-e "s/@arch@/${MY_ARCH}/g" \
+			-e "s/@wpa_supplicant_30_5_407_psk@/${wpa_supplicant_30_5_407_psk}/g" \
+			-e "s/@wpa_supplicant_AP_Gunner_SES_psk@/${wpa_supplicant_AP_Gunner_SES_psk}/g" \
+			-e "s/@wpa_supplicant_JohnWiFi_wep_key@/${wpa_supplicant_JohnWiFi_wep_key}/g" \
+			-e "s/@wpa_supplicant_iClubPublic_psk@/${wpa_supplicant_iClubPublic_psk}/g" \
+			-e "s/@wpa_supplicant_kuzmin_wep_key@/${wpa_supplicant_kuzmin_wep_key}/g" \
+			-e "s/@wpa_supplicant_linksys_g_wep_key@/${wpa_supplicant_linksys_g_wep_key}/g" \
+			-e "s/@wpa_supplicant_tatyana_wep_key@/${wpa_supplicant_tatyana_wep_key}/g" \
+			-e "s/@wpa_supplicant_yurij_wep_key@/${wpa_supplicant_yurij_wep_key}/g" \
 			'{}' \;
 }
 
