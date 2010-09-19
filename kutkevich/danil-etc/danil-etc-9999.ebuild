@@ -72,6 +72,9 @@ src_install() {
 	insinto /etc/layman
 	newins "${FILESDIR}"/layman/layman.cfg layman.cfg
 
+	# Remove iwlagn.conf
+	rm -r "${D}"/etc/modprobe.d
+
 	find "${D}" -type f -exec \
 		sed -i \
 			-e "s/^#${MY_HOST}:[ ]*//g" \
