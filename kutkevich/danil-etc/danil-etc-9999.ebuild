@@ -15,6 +15,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="frink homer milhouse revlovejoy"
 
+MY_OWNER="danil"
+
 pkg_setup() {
 	if use !frink && use !milhouse; then
 		die 'You must select host. For axample USE="homer"'
