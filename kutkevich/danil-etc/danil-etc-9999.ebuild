@@ -76,14 +76,14 @@ src_install() {
 		sed -i \
 			-e "s/^#${MY_HOST}:[ ]*//g" \
 			-e "s/@arch@/${MY_ARCH}/g" \
-			-e "s/@wpa_supplicant_30_5_407_psk@/${wpa_supplicant_30_5_407_psk}/g" \
-			-e "s/@wpa_supplicant_AP_Gunner_SES_psk@/${wpa_supplicant_AP_Gunner_SES_psk}/g" \
-			-e "s/@wpa_supplicant_JohnWiFi_wep_key@/${wpa_supplicant_JohnWiFi_wep_key}/g" \
-			-e "s/@wpa_supplicant_iClubPublic_psk@/${wpa_supplicant_iClubPublic_psk}/g" \
-			-e "s/@wpa_supplicant_kuzmin_wep_key@/${wpa_supplicant_kuzmin_wep_key}/g" \
-			-e "s/@wpa_supplicant_linksys_g_wep_key@/${wpa_supplicant_linksys_g_wep_key}/g" \
-			-e "s/@wpa_supplicant_tatyana_wep_key@/${wpa_supplicant_tatyana_wep_key}/g" \
-			-e "s/@wpa_supplicant_yurij_wep_key@/${wpa_supplicant_yurij_wep_key}/g" \
+			-e "s|@wpa_supplicant_30_5_407_psk@|${wpa_supplicant_30_5_407_psk}|g" \
+			-e "s|@wpa_supplicant_AP_Gunner_SES_psk@|${wpa_supplicant_AP_Gunner_SES_psk}|g" \
+			-e "s|@wpa_supplicant_JohnWiFi_wep_key@|${wpa_supplicant_JohnWiFi_wep_key}|g" \
+			-e "s|@wpa_supplicant_iClubPublic_psk@|${wpa_supplicant_iClubPublic_psk}|g" \
+			-e "s|@wpa_supplicant_kuzmin_wep_key@|${wpa_supplicant_kuzmin_wep_key}|g" \
+			-e "s|@wpa_supplicant_linksys_g_wep_key@|${wpa_supplicant_linksys_g_wep_key}|g" \
+			-e "s|@wpa_supplicant_tatyana_wep_key@|${wpa_supplicant_tatyana_wep_key}|g" \
+			-e "s|@wpa_supplicant_yurij_wep_key@|${wpa_supplicant_yurij_wep_key}|g" \
 			'{}' \;
 }
 
