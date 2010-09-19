@@ -2,8 +2,8 @@
 =www-servers/nginx-0.7.65-r1 ~@arch@
 
 # Linux kernel.
-#frink: =sys-kernel/gentoo-sources-2.6.35-r5 ~@arch@
-#frink: =sys-kernel/gentoo-sources-2.6.35-r4 ~@arch@
+# #frink: =sys-kernel/gentoo-sources-2.6.35-r5 ~@arch@
+# #frink: =sys-kernel/gentoo-sources-2.6.35-r4 ~@arch@
 
 # Chromium.
 #=media-video/ffmpeg-0.5_p22846 ~x86
