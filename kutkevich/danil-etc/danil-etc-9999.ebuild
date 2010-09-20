@@ -72,8 +72,13 @@ src_install() {
 	insinto /etc/layman
 	newins "${FILESDIR}"/layman/layman.cfg layman.cfg
 
-	# Remove iwlagn.conf
+	# Removal.
+
 	rm -r "${D}"/etc/modprobe.d
+
+	if use !milhouse; then
+		rm -r "${D}"/etc/acpi
+	fi
 
 	find "${D}" -type f -exec \
 		sed -i \
