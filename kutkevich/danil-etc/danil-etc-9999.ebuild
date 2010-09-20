@@ -55,6 +55,7 @@ src_install() {
 	newconfd "${FILESDIR}"/conf.d/emacs.danil emacs.danil
 	newconfd "${FILESDIR}"/conf.d/keymaps keymaps
 	newconfd "${FILESDIR}"/conf.d/net net
+	newconfd "${FILESDIR}"/conf.d/postgresql-8.4 postgresql-8.4
 	newconfd "${FILESDIR}"/conf.d/rc rc
 	newconfd "${FILESDIR}"/conf.d/xdm xdm
 
