@@ -22,6 +22,9 @@ dev-vcs/subversion -dso
 # <http://habrahabr.ru/blogs/Git/80909/>.
 #app-text/docbook-sgml-utils jadetex
 
+# Sphinx.
+app-misc/sphinx -postgres
+
 # Mutt.
 # `man muttrc`
 mail-client/mutt doc
