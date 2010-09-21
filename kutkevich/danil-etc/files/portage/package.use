@@ -23,7 +23,7 @@ dev-vcs/subversion -dso
 #app-text/docbook-sgml-utils jadetex
 
 # Sphinx.
-app-misc/sphinx postgres
+app-misc/sphinx mysql postgres
 
 # Mutt.
 # `man muttrc`
