@@ -87,6 +87,8 @@ src_install() {
 			-e "s/@arch@/${MY_ARCH}/g" \
 			-e "s|@wpa_supplicant_30_5_407_psk@|${wpa_supplicant_30_5_407_psk}|g" \
 			-e "s|@wpa_supplicant_AP_Gunner_SES_psk@|${wpa_supplicant_AP_Gunner_SES_psk}|g" \
+			-e "s|@wpa_supplicant_GDESLON_psk_1@|${wpa_supplicant_GDESLON_psk_1}|g" \
+			-e "s|@wpa_supplicant_GDESLON_psk_2@|${wpa_supplicant_GDESLON_psk_2}|g" \
 			-e "s|@wpa_supplicant_JohnWiFi_wep_key@|${wpa_supplicant_JohnWiFi_wep_key}|g" \
 			-e "s|@wpa_supplicant_iClubPublic_psk@|${wpa_supplicant_iClubPublic_psk}|g" \
 			-e "s|@wpa_supplicant_kuzmin_wep_key@|${wpa_supplicant_kuzmin_wep_key}|g" \
