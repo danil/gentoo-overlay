@@ -16,6 +16,7 @@ x11-terms/rxvt-unicode -iso14755 -xterm-color
 dev-vcs/git cvs
 # Enable subversion (version control system) support.
 dev-vcs/git subversion
+dev-vcs/git tk
 dev-vcs/subversion -dso
 
 # docbook2pdf <http://bugs.gentoo.org/61938#c0> used for
