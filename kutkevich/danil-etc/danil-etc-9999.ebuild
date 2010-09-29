@@ -62,6 +62,7 @@ src_install() {
 	newenvd "${FILESDIR}"/env.d/02locale 02locale
 
 	insinto /etc
+	newins "${FILESDIR}"/dispatch-conf.conf dispatch-conf.conf
 	newins "${FILESDIR}"/make.conf make.conf
 
 	insinto /etc/portage
