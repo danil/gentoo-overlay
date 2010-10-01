@@ -37,7 +37,8 @@ net-misc/openvpn iproute2
 
 # Chromium.
 media-video/ffmpeg threads
-# Enable h264 encoding.
+# Enable h264 encoding
+# <http://bugs.gentoo.org/show_bug.cgi?id=333547>.
 media-video/ffmpeg x264
 
 # nginx.
