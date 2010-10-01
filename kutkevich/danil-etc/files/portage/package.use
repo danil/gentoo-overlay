@@ -37,6 +37,8 @@ net-misc/openvpn iproute2
 
 # Chromium.
 media-video/ffmpeg threads
+# Enable h264 encoding.
+media-video/ffmpeg x264
 
 # nginx.
 www-servers/nginx -nginx_modules_http_geo
