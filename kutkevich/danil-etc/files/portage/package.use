@@ -10,6 +10,7 @@ net-print/cups gnutls
 sys-fs/udev extras
 x11-libs/qt-gui dbus
 x11-terms/rxvt-unicode -iso14755 -xterm-color
+dev-db/sqlite extensions
 
 # Git.
 # Enable CVS integration `man gitcvs-migration `.
