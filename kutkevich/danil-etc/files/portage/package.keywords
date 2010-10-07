@@ -1,5 +1,6 @@
 =app-mobilephone/dfu-util-0.1 ~@arch@
 =media-radio/radiotray-0.6.1 ~@arch@
+=www-plugins/adobe-flash-10.1.82.76 ~@arch@
 =www-servers/nginx-0.7.65-r1 ~@arch@
 
 # Linux kernel.
