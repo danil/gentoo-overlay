@@ -1,6 +1,8 @@
 app-crypt/pinentry gtk
 app-editors/emacs -X
+app-emulation/virtualbox-ose -additions
 app-text/fbreader -qt4 gtk
+dev-db/sqlite extensions
 dev-libs/pwlib ldap
 games-strategy/freeciv sdl -gtk
 media-sound/moc curl
@@ -10,7 +12,6 @@ net-print/cups gnutls
 sys-fs/udev extras
 x11-libs/qt-gui dbus
 x11-terms/rxvt-unicode -iso14755 -xterm-color
-dev-db/sqlite extensions
 
 # Git.
 # Enable CVS integration `man gitcvs-migration `.
