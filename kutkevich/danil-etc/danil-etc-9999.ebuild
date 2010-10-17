@@ -83,6 +83,13 @@ src_install() {
 		rm -r "${D}"/etc/acpi
 	fi
 
+	# # Linux kernel's configs.
+	# for path in $(find "${D}"/usr/src/linux* -mount -type f -name ".config*") ; do \
+	# 	if [[ "$path" != *${MY_HOST}* ]]; then
+	# 		rm -r "${path}"
+	# 	fi
+	# done
+
 	find "${D}" -type f -exec \
 		sed -i \
 			-e "s/^#${MY_HOST}:[ ]*//g" \
