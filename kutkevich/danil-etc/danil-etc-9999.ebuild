@@ -86,6 +86,7 @@ src_install() {
 	# # Linux kernel's configs.
 	# for path in $(find "${D}"/usr/src/linux* -mount -type f -name ".config*") ; do \
 	# 	if [[ "$path" != *${MY_HOST}* ]]; then
+	# 		# <http://stackoverflow.com/questions/229551/string-contains-in-bash>.
 	# 		rm -r "${path}"
 	# 	fi
 	# done
