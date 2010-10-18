@@ -93,3 +93,7 @@ config_ppp0=( "ppp" )
 link_ppp0="/dev/ttyUSB0"
 dhcpcd_ppp0="-t 10"
 dhcp_ppp0="release nodns nontp nonis"
+# <http://forums.gentoo.org/viewtopic-t-847989.html?sid=8a6c694158f33bb0b8761c6072c805bb>,
+# <http://www.gentoo.ru/content/3g-huawei-e1750>,
+# <http://ru.gentoo-wiki.com/wiki/Huawei_GPRS/3G_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BC>,
+# <http://en.gentoo-wiki.com/wiki/Huawei_E160>.

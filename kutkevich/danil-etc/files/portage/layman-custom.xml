@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<layman>
+<overlays>
+  <overlay contact="overlay@allenjb.me.uk" name="allenjb" src="https://svn.allenjb.me.uk/svn/overlay/trunk" type="svn">
+    <link>https://trac.allenjb.me.uk/overlay</link>
+    <description>AllenJB's personal overlay</description>
+  </overlay>
+</overlays>
+</layman>

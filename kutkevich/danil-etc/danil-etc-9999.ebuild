@@ -66,6 +66,7 @@ src_install() {
 	newins "${FILESDIR}"/make.conf make.conf
 
 	insinto /etc/portage
+	newins "${FILESDIR}"/portage/layman-custom.xml layman-custom.xml
 	newins "${FILESDIR}"/portage/package.keywords package.keywords
 	newins "${FILESDIR}"/portage/package.license package.license
 	newins "${FILESDIR}"/portage/package.mask package.mask
