@@ -5,5 +5,9 @@
     <link>https://trac.allenjb.me.uk/overlay</link>
     <description>AllenJB's personal overlay</description>
   </overlay>
+  <overlay contact="http://www.ohloh.net/accounts/coderoar" name="ubuntu-overlay" src="http://ubuntu-overlay.googlecode.com/svn/trunk" type="svn">
+    <link>http://code.google.com/p/ubuntu-overlay</link>
+    <description>Ubuntu experience in Gentoo</description>
+  </overlay>
 </overlays>
 </layman>
