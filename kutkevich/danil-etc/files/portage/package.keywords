@@ -1,5 +1,4 @@
 =app-mobilephone/dfu-util-0.1 ~@arch@
-=gnome-extra/ubuntuone-client-1.2.1 ~@arch@
 =media-radio/radiotray-0.6.1 ~@arch@
 =www-servers/nginx-0.7.65-r1 ~@arch@
 
@@ -72,3 +71,8 @@
 
 # Sunrise overlay.
 =gnome-extra/nautilus-dropbox-0.6.1-r1 ~@arch@
+
+# Ubuntu overlay.
+# Ubuntu One.
+=dev-python/ubuntuone-storage-protocol-1.1.3 ~@arch@
+=gnome-extra/ubuntuone-client-1.2.1 ~@arch@
