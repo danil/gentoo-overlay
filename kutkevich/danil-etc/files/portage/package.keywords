@@ -74,5 +74,5 @@
 
 # Ubuntu overlay.
 # Ubuntu One.
-=dev-python/ubuntuone-storage-protocol-1.1.3 ~@arch@
+=dev-python/ubuntuone-storage-protocol-1.2.0 ~@arch@
 =gnome-extra/ubuntuone-client-1.2.1 ~@arch@
