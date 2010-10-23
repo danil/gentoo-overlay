@@ -51,10 +51,14 @@ src_install() {
 	dodir /usr
 	cp -ra "${S}/files/usr" "${D}/" || die "failed to install files"
 
+	newconfd "${FILESDIR}"/conf.d/clock clock
 	newconfd "${FILESDIR}"/conf.d/consolefont consolefont
 	newconfd "${FILESDIR}"/conf.d/emacs.danil emacs.danil
 	newconfd "${FILESDIR}"/conf.d/keymaps keymaps
+	newconfd "${FILESDIR}"/conf.d/local.start local.start
 	newconfd "${FILESDIR}"/conf.d/net net
+	newconfd "${FILESDIR}"/conf.d/ntp-client ntp-client
+	newconfd "${FILESDIR}"/conf.d/orbit.beta.kutkevich.org orbit.beta.kutkevich.org
 	newconfd "${FILESDIR}"/conf.d/postgresql-8.4 postgresql-8.4
 	newconfd "${FILESDIR}"/conf.d/rc rc
 	newconfd "${FILESDIR}"/conf.d/xdm xdm
