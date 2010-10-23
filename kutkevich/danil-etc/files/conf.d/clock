@@ -16,9 +16,9 @@ CLOCK="UTC"
 #TIMEZONE="Factory"
 
 # Danil
-# <http://gentoo.org/doc/en/gentoo-x86-quickinstall.xml#doc_chap2_pre23>,
-# <http://gentoo.org/doc/en/guide-localization.xml#doc_chap1_pre1>,
-# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=8#doc_chap3_pre4>.
+# <http://gentoo.org/doc/en/gentoo-x86-quickinstall.xml?style=printable#doc_chap2_pre23>,
+# <http://gentoo.org/doc/en/guide-localization.xml?style=printable#doc_chap1_pre1>,
+# <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=1&chap=8&style=printable#doc_chap3_pre4>.
 TIMEZONE="Europe/Moscow"
 
 # If you wish to pass any other arguments to hwclock during bootup,
@@ -29,10 +29,9 @@ CLOCK_OPTS=""
 # If you want to set the Hardware Clock to the current System Time (software
 # clock) during shutdown, then say "yes" here.
 
-#CLOCK_SYSTOHC="no"
-
 # Danil.
 # <http://en.gentoo-wiki.com/wiki/NTP#Setting_the_hardware_clock_during_shutdown>.
+#CLOCK_SYSTOHC="no"
 CLOCK_SYSTOHC="yes"
 
 ### ALPHA SPECIFIC OPTIONS ###
