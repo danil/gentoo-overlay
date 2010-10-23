@@ -74,6 +74,7 @@
 
 # Ubuntu overlay.
 # Ubuntu One.
+=dev-python/configglue-0.2 ~@arch@
 =dev-python/oauth-1.0.1 ~@arch@
 =dev-python/ubuntuone-storage-protocol-1.2.0 ~@arch@
 =gnome-extra/ubuntuone-client-1.2.1 ~@arch@
