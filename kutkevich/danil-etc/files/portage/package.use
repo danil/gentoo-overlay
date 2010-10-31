@@ -5,6 +5,7 @@ app-text/fbreader -qt4 gtk
 dev-db/sqlite extensions
 dev-libs/pwlib ldap
 games-strategy/freeciv sdl -gtk
+media-libs/gd fontconfig truetype
 media-sound/moc curl
 media-video/mplayer ftp
 net-libs/libsoup gnome
