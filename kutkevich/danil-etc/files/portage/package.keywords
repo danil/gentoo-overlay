@@ -1,4 +1,5 @@
 =app-mobilephone/dfu-util-0.1 ~@arch@
+=app-office/openoffice-bin-3.2.0 ~@arch@
 =media-radio/radiotray-0.6.1 ~@arch@
 =www-servers/nginx-0.7.65-r1 ~@arch@
 
