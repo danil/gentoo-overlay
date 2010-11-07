@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-RDEPEND="dev-lang/luarocks"
+RDEPEND="dev-lua/luarocks"
 
 pkg_setup() {
 	# Creating nginx user and group.
