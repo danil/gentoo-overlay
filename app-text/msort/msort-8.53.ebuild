@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -16,6 +16,7 @@ IUSE=""
 DEPEND="
 >=dev-libs/tre-0.8.0
 dev-libs/icu"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	econf --disable-utf8proc --disable-uninum
