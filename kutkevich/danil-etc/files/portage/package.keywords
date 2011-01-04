@@ -21,6 +21,10 @@
 # =app-text/fbreader-0.12.2 ~@arch@
 # =dev-libs/liblinebreak-1.0 ~@arch@
 
+# Rxvt-unicode.
+# =sys-libs/ncurses-5.7-r6 ~@arch@
+# =x11-terms/rxvt-unicode-9.10 ~@arch@
+
 # Huawei E1550 <http://gentoo.ru/node/17677#comment-127287>.
 #=sys-apps/usb_modeswitch-1.1.1 ~@arch@
 =sys-apps/usb_modeswitch-1.1.4 ~@arch@

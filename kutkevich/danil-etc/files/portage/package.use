@@ -1,6 +1,7 @@
 app-crypt/pinentry gtk
 app-editors/emacs -X
 app-emulation/virtualbox-ose -additions
+app-office/openoffice-bin java
 app-text/fbreader -qt4 gtk
 dev-db/sqlite extensions
 dev-libs/pwlib ldap
@@ -13,6 +14,8 @@ net-print/cups gnutls
 sys-fs/udev extras
 x11-libs/qt-gui dbus
 x11-terms/rxvt-unicode -iso14755 -xterm-color
+#x11-terms/rxvt-unicode 256-color -iso14755
+x11-wm/xmonad doc
 
 # Git.
 # Enable CVS integration `man gitcvs-migration `.
