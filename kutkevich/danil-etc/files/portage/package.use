@@ -1,6 +1,6 @@
 app-crypt/pinentry gtk
 app-editors/emacs -X
-app-emulation/virtualbox-ose -additions
+app-emulation/virtualbox -additions
 app-office/openoffice-bin java
 app-text/fbreader -qt4 gtk
 dev-db/sqlite extensions
