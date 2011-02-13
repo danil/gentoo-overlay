@@ -41,6 +41,7 @@ mail-client/mutt doc
 net-misc/openvpn iproute2
 
 # Chromium.
+dev-libs/libxml2 icu
 media-video/ffmpeg threads
 # Enable h264 encoding
 # <http://bugs.gentoo.org/show_bug.cgi?id=333547>,
