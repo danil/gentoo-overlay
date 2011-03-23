@@ -57,6 +57,11 @@ modules=( "wpa_supplicant" )
 # dns_servers_tatyana=( "192.168.9.1" )
 # dns_search_domains_tatyana=( "tat" )
 
+# duddanov.
+config_linksys=( "192.168.2.150/24" )
+routes_linksys=( "default via 192.168.2.1" )
+dns_servers_linksys=( "192.168.2.1" )
+
 # Wireless Tools
 # <http://gentoo.org/doc/en/handbook/handbook-x86.xml?part=4&chap=4&style=printable#doc_chap3_pre2>.
 # Configure WEP keys for Access Points called ESSID1 and ESSID2

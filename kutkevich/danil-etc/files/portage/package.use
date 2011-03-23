@@ -64,3 +64,6 @@ net-dialup/ppp dhcp #mppe-mppc
 
 # Lisp/Scheme overlay.
 x11-wm/stumpwm sbcl
+
+# Empathy.
+net-voip/telepathy-connection-managers jabber irc sip icq

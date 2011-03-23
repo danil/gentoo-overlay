@@ -1,8 +1,8 @@
 =app-mobilephone/dfu-util-0.1 ~@arch@
 =app-office/openoffice-bin-3.2.0 ~@arch@
+=dev-lang/io-2009.01.02-r1 ~@arch@
 =media-radio/radiotray-0.6.1 ~@arch@
 =sci-mathematics/genius-1.0.9 ~@arch@
-=www-servers/nginx-0.7.65-r1 ~@arch@
 
 # Linux kernel.
 # #frink: =sys-kernel/gentoo-sources-2.6.35-r5 ~@arch@
@@ -20,7 +20,7 @@
 
 # Empathy
 # <http://forums.gentoo.org/viewtopic-p-6424218.html>.
-=net-im/empathy-2.30.3 ~@arch@
+# =net-im/empathy-2.30.3 ~@arch@
 
 # FBReader.
 # =app-text/fbreader-0.12.2 ~@arch@
@@ -47,8 +47,6 @@
 #=virtual/rubygems-0-r3 ~@arch@
 #=app-admin/eselect-ruby-20100603 ~@arch@
 #=dev-lang/ruby-1.9.1_p429 ~@arch@
-
-=net-im/skype-2.1.0.81 ~@arch@
 
 # Kutkevich overlay.
 
