@@ -18,10 +18,6 @@
 =app-emacs/bongo-20090713 ~@arch@
 #=app-emacs/emacs-w3m-1.4.4_p20090605 ~@arch@
 
-# Empathy
-# <http://forums.gentoo.org/viewtopic-p-6424218.html>.
-# =net-im/empathy-2.30.3 ~@arch@
-
 # FBReader.
 # =app-text/fbreader-0.12.2 ~@arch@
 # =dev-libs/liblinebreak-1.0 ~@arch@
