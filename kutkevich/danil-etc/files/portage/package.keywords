@@ -1,6 +1,8 @@
 =app-mobilephone/dfu-util-0.1 ~@arch@
 =app-office/openoffice-bin-3.2.0 ~@arch@
 =dev-lang/io-2009.01.02-r1 ~@arch@
+=games-strategy/freeciv-2.2.5 ~@arch@
+=gnome-extra/nautilus-dropbox-0.6.7 ~@arch@
 =media-radio/radiotray-0.6.1 ~@arch@
 =sci-mathematics/genius-1.0.9 ~@arch@
 
@@ -72,9 +74,6 @@
 =dev-lisp/sbcl-1.0.36-r1 ~@arch@
 =dev-lisp/clx-0.7.4 ~@arch@
 =dev-lisp/cl-ppcre-1.2.16 ~@arch@
-
-# Sunrise overlay.
-=gnome-extra/nautilus-dropbox-0.6.1-r1 ~@arch@
 
 # Ubuntu overlay.
 # Ubuntu One.
