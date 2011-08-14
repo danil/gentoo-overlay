@@ -4,17 +4,17 @@
 =games-strategy/freeciv-2.2.5 ~@arch@
 =gnome-extra/nautilus-dropbox-0.6.7 ~@arch@
 =media-radio/radiotray-0.6.1 ~@arch@
-=sci-mathematics/genius-1.0.9 ~@arch@
+=sci-mathematics/genius-1.0.11 ~@arch@
 
 # Linux kernel.
 # #frink: =sys-kernel/gentoo-sources-2.6.35-r5 ~@arch@
 # #frink: =sys-kernel/gentoo-sources-2.6.35-r4 ~@arch@
 
 # Chromium.
-#=media-video/ffmpeg-0.5_p22846 ~x86
-#=www-client/chromium-5.0.342.9 ~x86
-#=www-client/chromium-5.0.307.11 ~x86
-#=www-client/chromium-5.0.307.9 ~x86
+#=media-video/ffmpeg-0.5_p22846 ~@arch@
+#=www-client/chromium-5.0.342.9 ~@arch@
+#=www-client/chromium-5.0.307.11 ~@arch@
+#=www-client/chromium-5.0.307.9 ~@arch@
 
 # Emacs.
 =app-emacs/bongo-20090713 ~@arch@
@@ -34,7 +34,7 @@
 
 # Clean out your world file
 # <http://forums.gentoo.org/viewtopic-t-142475.html>.
-#=app-portage/udept-0.5.99.0.2.95-r1 ~x86
+#=app-portage/udept-0.5.99.0.2.95-r1 ~@arch@
 
 # Ruby 1.9
 # <http://gentoo.org/proj/en/prog_lang/ruby/index.xml?style=printable>,
@@ -82,3 +82,15 @@
 =dev-python/oauth-1.0.1 ~@arch@
 =dev-python/ubuntuone-storage-protocol-1.2.0 ~@arch@
 =gnome-extra/ubuntuone-client-1.2.1 ~@arch@
+
+# VirtualBox.
+=app-emulation/virtualbox-4.0.6-r1 ~@arch@
+=app-emulation/virtualbox-modules-4.0.6-r1 ~@arch@
+=app-emulation/virtualbox-extpack-oracle-4.0.6 ~@arch@
+=app-emulation/virtualbox-additions-4.0.4 ~@arch@
+
+# xmonad.
+=x11-misc/xmobar-0.13 ~@arch@
+=dev-haskell/alsa-mixer-0.1.2 ~@arch@
+=dev-haskell/alsa-core-0.5 ~@arch@
+=dev-haskell/x11-xft-0.3 ~@arch@

@@ -13,8 +13,7 @@ net-libs/libsoup gnome
 net-print/cups gnutls
 sys-fs/udev extras
 x11-libs/qt-gui dbus
-x11-terms/rxvt-unicode -iso14755 -xterm-color
-#x11-terms/rxvt-unicode 256-color -iso14755
+x11-terms/rxvt-unicode -iso14755 256-color
 x11-wm/xmonad doc
 
 # Git.
@@ -24,6 +23,8 @@ dev-vcs/git cvs
 dev-vcs/git subversion
 dev-vcs/git tk
 dev-vcs/subversion -dso
+# Gitweb <http://philsergi.com/2008/04/gitweb-apache-gentoo.html>.
+#dev-vcs/git cgi
 
 # docbook2pdf <http://bugs.gentoo.org/61938#c0> used for
 # <http://habrahabr.ru/blogs/Git/80909/>.
@@ -68,3 +69,7 @@ x11-wm/stumpwm sbcl
 
 # Empathy.
 net-voip/telepathy-connection-managers jabber irc sip icq
+
+# Linphone.
+net-voip/linphone video
+media-libs/mediastreamer video
