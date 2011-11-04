@@ -7,6 +7,7 @@
 =net-libs/nodejs-0.4.11 ~@arch@
 =net-mail/offlineimap-6.3.4 ~@arch@
 =sci-mathematics/genius-1.0.11 ~@arch@
+media-sound/volumeicon ~@arch@
 www-client/google-chrome ~@arch@
 
 # Rhythmbox.

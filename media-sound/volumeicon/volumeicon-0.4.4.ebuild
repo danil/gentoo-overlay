@@ -11,12 +11,18 @@ SRC_URI="http://www.softwarebakery.com/maato/files/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="libnotify"
 
 RDEPEND="media-libs/alsa-lib
-	  >=x11-libs/gtk+-2.16
-	  x11-terms/xterm"
+	>=x11-libs/gtk+-2.16
+	x11-terms/xterm
+	libnotify? ( >=x11-libs/libnotify-0.7.4 )
+"
 DEPEND="${RDEPEND}"
+
+src_configure() {
+	econf $(use_enable libnotify notify)
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die
