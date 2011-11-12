@@ -23,8 +23,8 @@ x11-libs/libcompizconfig ~@arch@
 x11-plugins/compiz-plugins-extra ~@arch@
 x11-plugins/compiz-plugins-main ~@arch@
 x11-plugins/screenlets ~@arch@
-x11-themes/emerald-themes ~@arch@
-x11-wm/compiz ~@arch@
+=x11-themes/emerald-themes-0.8.6-r1 ~@arch@
+=x11-wm/compiz-0.8.6-r1 ~@arch@
 x11-wm/compiz-fusion ~@arch@
 x11-wm/emerald ~@arch@
 

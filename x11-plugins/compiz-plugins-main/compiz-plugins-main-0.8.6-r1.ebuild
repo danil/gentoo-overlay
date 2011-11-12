@@ -35,7 +35,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	if ! use gconf; then
 		epatch "${FILESDIR}"/${PN}-no-gconf.patch
-		epatch "${FILESDIR}"/${PN}-add-hjkl-vi-style-navigation-to-expo-plugin.patch
+		epatch "${FILESDIR}"/${P}-add-hjkl-vi-style-navigation-to-expo-plugin.patch
 
 		# required to apply the above patch
 		intltoolize --copy --force || die "intltoolize failed"
