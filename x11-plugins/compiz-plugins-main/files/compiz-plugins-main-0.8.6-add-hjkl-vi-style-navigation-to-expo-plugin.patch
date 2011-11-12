@@ -1,0 +1,17 @@
+--- src/expo/expo.c	2010-03-29 17:56:27.000000000 +0400
++++ src/expo/expo.c	2011-11-12 18:21:45.041422982 +0400
+@@ -1674,10 +1674,10 @@
+     expoSetPrevVpButtonInitiate (d, expoPrevVp);
+ 
+ 
+-    ed->leftKey  = XKeysymToKeycode (d->display, XStringToKeysym ("Left"));
+-    ed->rightKey = XKeysymToKeycode (d->display, XStringToKeysym ("Right"));
+-    ed->upKey    = XKeysymToKeycode (d->display, XStringToKeysym ("Up"));
+-    ed->downKey  = XKeysymToKeycode (d->display, XStringToKeysym ("Down"));
++    ed->leftKey  = XKeysymToKeycode (d->display, XStringToKeysym ("h"));
++    ed->rightKey = XKeysymToKeycode (d->display, XStringToKeysym ("l"));
++    ed->upKey    = XKeysymToKeycode (d->display, XStringToKeysym ("k"));
++    ed->downKey  = XKeysymToKeycode (d->display, XStringToKeysym ("j"));
+ 
+     WRAP (ed, d, handleEvent, expoHandleEvent);
+     d->base.privates[displayPrivateIndex].ptr = ed;
