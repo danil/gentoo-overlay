@@ -1,18 +1,13 @@
 Danil Kutkevich's Gentoo overlay
 ================================
+Danil Kutkevich <danil@kutkevich.org>
 
-Copyright (C) 2010 Danil Kutkevich <danil@kutkevich.org>
+Simple overlay created by Danil Kutkevich <danil@kutkevich.org>.
+Mostly bleeding edge, dangerous, experimental and unstable packages.
 
-This Gentoo overlay is free software: you can redistribute it and/or
-modify it under the terms of the GNU General Public License as
-published by the Free Software Foundation, either version 2 of the
-License, or (at your option) any later version.
+Before You Start
+----------------
 
-This Gentoo overlay is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this Gentoo overlay. See COPYING file.
-If not, see <http://www.gnu.org/licenses/>.
+Remember you're installing unofficial overlay.
+There is a chance this will eat your cat and kill your hamster.
+You have been warned.

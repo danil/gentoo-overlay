@@ -7,6 +7,7 @@
 =net-libs/nodejs-0.4.11 ~@arch@
 =net-mail/offlineimap-6.3.4 ~@arch@
 =sci-mathematics/genius-1.0.11 ~@arch@
+media-sound/listen ~@arch@
 media-sound/volumeicon ~@arch@
 www-client/google-chrome ~@arch@
 
@@ -21,6 +22,7 @@ x11-libs/compiz-bcop ~@arch@
 x11-libs/libcompizconfig ~@arch@
 x11-plugins/compiz-plugins-extra ~@arch@
 x11-plugins/compiz-plugins-main ~@arch@
+x11-plugins/screenlets ~@arch@
 x11-themes/emerald-themes ~@arch@
 x11-wm/compiz ~@arch@
 x11-wm/compiz-fusion ~@arch@

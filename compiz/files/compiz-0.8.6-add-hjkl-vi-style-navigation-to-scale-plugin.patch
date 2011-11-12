@@ -1,0 +1,17 @@
+--- scale.c	2010-03-28 16:15:35.000000000 +0400
++++ scale.c	2011-11-12 17:20:39.645161593 +0400
+@@ -2006,10 +2006,10 @@
+     sd->selectedWindow = None;
+     sd->hoveredWindow = None;
+ 
+-    sd->leftKeyCode  = XKeysymToKeycode (d->display, XStringToKeysym ("Left"));
+-    sd->rightKeyCode = XKeysymToKeycode (d->display, XStringToKeysym ("Right"));
+-    sd->upKeyCode    = XKeysymToKeycode (d->display, XStringToKeysym ("Up"));
+-    sd->downKeyCode  = XKeysymToKeycode (d->display, XStringToKeysym ("Down"));
++    sd->leftKeyCode  = XKeysymToKeycode (d->display, XStringToKeysym ("h"));
++    sd->rightKeyCode = XKeysymToKeycode (d->display, XStringToKeysym ("l"));
++    sd->upKeyCode    = XKeysymToKeycode (d->display, XStringToKeysym ("k"));
++    sd->downKeyCode  = XKeysymToKeycode (d->display, XStringToKeysym ("j"));
+ 
+     WRAP (sd, d, handleEvent, scaleHandleEvent);
+ 
