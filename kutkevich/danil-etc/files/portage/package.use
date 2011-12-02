@@ -22,6 +22,17 @@ x11-terms/rxvt-unicode -iso14755 256-color
 x11-wm/compiz-fusion emerald
 x11-wm/xmonad doc
 
+# Gajim.
+dev-lang/python:2.7 sqlite
+net-libs/farsight2 python
+net-im/gajim gmail jingle
+
+# Inkscape.
+media-libs/lcms:0 python
+
+# thunderbird-bin.
+net-misc/curl nss
+
 # media-sound/listen.
 media-sound/listen gnome
 media-libs/libgpod python
@@ -53,7 +64,7 @@ app-misc/sphinx mysql postgres
 
 # Mutt.
 # `man muttrc`
-mail-client/mutt doc
+mail-client/mutt doc imap
 
 # Bridging TAP OpenVPN
 # <http://www.gentoo-wiki.info/HOWTO_Road_Warriors_with_OpenVPN#Downloading_and_installing_OpenVPN>.
@@ -86,7 +97,7 @@ net-dialup/ppp dhcp #mppe-mppc
 x11-wm/stumpwm sbcl
 
 # Empathy.
-net-voip/telepathy-connection-managers jabber irc sip icq
+net-im/telepathy-connection-managers jabber irc sip icq
 
 # Linphone.
 net-voip/linphone video
