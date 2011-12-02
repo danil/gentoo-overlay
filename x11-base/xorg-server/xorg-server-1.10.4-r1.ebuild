@@ -114,7 +114,9 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-1.9-nouveau-default.patch
 	"${FILESDIR}"/xorg-cve-2011-4028+4029.patch
 
-	 # Fix the urxvt cursor with compositing.
+	 # Fix the urxvt cursor with compositing
+	 # <http://code.google.com/p/chromium-os/issues/detail?id=12997>,
+	 # <http://gerrit.chromium.org/gerrit/474>.
 	"${FILESDIR}"/no-damage-report.patch
 )
 
