@@ -1,4 +1,5 @@
 # sys-devel/gcc go
+app-cdr/gnomebaker dvdr
 app-crypt/pinentry gtk
 app-editors/emacs -X
 app-emulation/virtualbox -additions
@@ -8,6 +9,7 @@ dev-db/sqlite extensions
 dev-libs/libxml2 python
 dev-libs/pwlib ldap
 games-strategy/freeciv sdl -gtk
+gnome-base/gvfs afp archive avahi cdda fuse gdu gnome-keyring gphoto2 ios samba
 media-libs/gd fontconfig truetype
 media-libs/libpng apng
 media-sound/moc curl
@@ -15,6 +17,8 @@ media-video/mplayer ftp
 net-libs/libsoup gnome
 net-p2p/transmission gtk
 net-print/cups gnutls
+sys-auth/consolekit policykit
+sys-auth/pambase consolekit
 sys-fs/udev extras
 x11-libs/qt-gui dbus
 x11-misc/shutter drawing
@@ -104,3 +108,10 @@ net-im/telepathy-connection-managers jabber irc sip icq
 net-voip/linphone video
 #net-voip/linphone gtk
 media-libs/mediastreamer video
+
+# # Gnome 2.
+# gnome-base/gnome-menus python
+
+# Ekiga.
+net-libs/opal sip
+net-libs/ptlib wav
