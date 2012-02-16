@@ -1,3 +1,5 @@
+# */*::kutkevich
+
 =app-mobilephone/dfu-util-0.1 ~@arch@
 =app-office/openoffice-bin-3.2.0 ~@arch@
 =dev-lang/io-2009.01.02-r1 ~@arch@
