@@ -9,6 +9,7 @@ dev-db/sqlite extensions
 dev-libs/libxml2 python
 dev-libs/pwlib ldap
 games-strategy/freeciv sdl -gtk
+gnome-base/gvfs afp archive avahi cdda fuse gdu gnome-keyring gphoto2 ios samba
 media-libs/gd fontconfig truetype
 media-libs/libpng apng
 media-sound/moc curl
@@ -108,6 +109,9 @@ net-voip/linphone video
 #net-voip/linphone gtk
 media-libs/mediastreamer video
 
+# # Gnome 2.
+# gnome-base/gnome-menus python
+
 # Ekiga.
-net-libs/ptlib wav
 net-libs/opal sip
+net-libs/ptlib wav
