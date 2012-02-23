@@ -76,7 +76,7 @@ src_prepare() {
 	echo "gtk/gnome/compiz-wm.desktop.in" >> "${S}/po/POTFILES.skip"
 	echo "metadata/core.xml.in" >> "${S}/po/POTFILES.skip"
 
-	epatch "${FILESDIR}"/${P}-add-hjkl-vi-style-navigation-to-scale-plugin.patch
+	epatch "${FILESDIR}"/${PN}-0.8.6-add-hjkl-vi-style-navigation-to-scale-plugin.patch
 
 	if ! use gnome || ! use gconf; then
 		epatch "${FILESDIR}"/${PN}-no-gconf.patch

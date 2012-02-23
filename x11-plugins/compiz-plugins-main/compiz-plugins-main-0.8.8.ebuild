@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-add-hjkl-vi-style-navigation-to-expo-plugin.patch
+	epatch "${FILESDIR}"/${PN}-0.8.6-add-hjkl-vi-style-navigation-to-expo-plugin.patch
 
 	if ! use gconf; then
 		epatch "${FILESDIR}"/${PN}-no-gconf.patch
