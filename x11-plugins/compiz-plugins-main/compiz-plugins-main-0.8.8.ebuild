@@ -15,13 +15,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="gconf"
 
-MY_PV="0.8.4"
-
 RDEPEND="
 	>=gnome-base/librsvg-2.14.0:2
 	virtual/jpeg:0
 	x11-libs/cairo
-	>=x11-libs/compiz-bcop-${MY_PV}
+	>=x11-libs/compiz-bcop-${PV}
 	>=x11-wm/compiz-${PV}[gconf?]
 "
 
