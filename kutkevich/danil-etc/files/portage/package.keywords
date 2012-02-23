@@ -14,6 +14,9 @@ media-sound/volumeicon ~@arch@
 www-client/google-chrome:stable ~@arch@
 x11-base/xorg-server::kutkevich ~@arch@
 
+# Tmp.
+app-backup/dvcs-autosync ~@arch@
+
 # Rhythmbox.
 =media-sound/rhythmbox-0.13.3 ~@arch@
 =app-misc/media-player-info-14 ~@arch@
@@ -89,3 +92,7 @@ x11-libs/compiz-bcop ~@arch@
 # Virtualbox.
 =app-emulation/virtualbox-4.1.8 ~@arch@
 =app-emulation/virtualbox-modules-4.1.8 ~@arch@
+
+# Avant Window Navigator
+=x11-libs/libdesktop-agnostic-0.3.92 ~@arch@
+gnome-extra/avant-window-navigator ~@arch@
