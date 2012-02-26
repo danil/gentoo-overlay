@@ -1,5 +1,5 @@
 # sys-devel/gcc go
-app-admin/conky lua lua-cairo
+app-admin/conky lua lua-cairo iostats
 app-cdr/gnomebaker dvdr
 app-crypt/pinentry gtk
 app-editors/emacs -X
