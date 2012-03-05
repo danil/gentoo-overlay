@@ -1,5 +1,5 @@
 # sys-devel/gcc go
-app-admin/conky lua lua-cairo iostats
+app-admin/conky lua lua-cairo
 app-cdr/gnomebaker dvdr
 app-crypt/pinentry gtk
 app-editors/emacs -X
@@ -11,6 +11,7 @@ dev-libs/libxml2 python
 dev-libs/pwlib ldap
 games-strategy/freeciv sdl -gtk
 gnome-base/gvfs afp archive avahi cdda fuse gdu gnome-keyring gphoto2 ios samba
+gnome-extra/avant-window-navigator vala
 media-libs/gd fontconfig truetype
 media-libs/libpng apng
 media-sound/moc curl
