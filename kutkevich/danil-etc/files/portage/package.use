@@ -32,10 +32,7 @@ x11-terms/rxvt-unicode -iso14755 256-color
 x11-wm/compiz-fusion emerald
 x11-wm/xmonad doc
 
-# GoldenDict.
-x11-libs/qt-core qt3support
-x11-libs/qt-gui qt3support
-x11-libs/qt-sql qt3support
+x11-apps/fusion-icon gtk
 
 # Gajim.
 dev-lang/python:2.7 sqlite
