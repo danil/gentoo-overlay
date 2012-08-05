@@ -1,18 +1,19 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.2-r2.ebuild,v 1.2 2011/12/20 15:44:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.4-r1.ebuild,v 1.8 2012/06/09 18:54:12 armin76 Exp $
 
 EAPI=4
 
 XORG_DOC=doc
-inherit xorg-2 multilib versionator
+XORG_EAUTORECONF=yes
+inherit flag-o-matic xorg-2 multilib versionator
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/xserver"
 
 DESCRIPTION="X.Org X servers"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 
 IUSE_SERVERS="dmx kdrive xnest xorg xvfb"
-IUSE="${IUSE_SERVERS} ipv6 minimal nptl tslib +udev"
+IUSE="${IUSE_SERVERS} ipv6 minimal nptl selinux tslib +udev"
 
 RDEPEND=">=app-admin/eselect-opengl-1.0.8
 	dev-libs/openssl
@@ -29,7 +30,7 @@ RDEPEND=">=app-admin/eselect-opengl-1.0.8
 	>=x11-libs/pixman-0.21.8
 	>=x11-libs/xtrans-1.2.2
 	>=x11-misc/xbitmaps-1.0.1
-	>=x11-misc/xkeyboard-config-1.4
+	>=x11-misc/xkeyboard-config-2.4.1-r3
 	dmx? (
 		x11-libs/libXt
 		>=x11-libs/libdmx-1.0.99.1
@@ -54,7 +55,8 @@ RDEPEND=">=app-admin/eselect-opengl-1.0.8
 	)
 	tslib? ( >=x11-libs/tslib-1.0 )
 	udev? ( >=sys-fs/udev-150 )
-	>=x11-apps/xinit-1.3"
+	>=x11-apps/xinit-1.3
+	selinux? ( sec-policy/selinux-xserver )"
 
 DEPEND="${RDEPEND}
 	sys-devel/flex
@@ -111,6 +113,10 @@ PATCHES=(
 	"${UPSTREAMED_PATCHES[@]}"
 	"${FILESDIR}"/${PN}-disable-acpi.patch
 	"${FILESDIR}"/${PN}-1.9-nouveau-default.patch
+	"${FILESDIR}"/${PN}-1.11-disable-tests-without-ddx.patch
+	"${FILESDIR}"/${PN}-1.11-dix-pointerrootwin-send-focusin.patch
+	"${FILESDIR}"/${PN}-1.11-dix-send-focus-events.patch
+	"${FILESDIR}"/${PN}-1.11-log-format-fix.patch
 
 	# Danil.
 	# Fix the urxvt cursor with compositing
@@ -176,6 +182,9 @@ pkg_setup() {
 		ln -s "${EROOT}usr/$(get_libdir)/opengl/global/include/$i.h" "${T}/mesa-symlinks/GL/$i.h" || die
 	done
 	append-cppflags "-I${T}/mesa-symlinks"
+
+	# Make breakage less obvious, bug #402285.
+	replace-flags -O3 -O2
 }
 
 src_install() {
