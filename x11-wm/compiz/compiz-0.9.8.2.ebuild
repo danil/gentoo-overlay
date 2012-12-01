@@ -107,6 +107,8 @@ pkg_pretend() {
 src_prepare() {
 	epatch "${FILESDIR}/${P}-sandbox.patch"
 
+	epatch "${FILESDIR}"/${PN}-0.9.8-add-hjkl-vi-style-navigation-to-scale-plugin.patch
+
 	echo "gtk/gnome/compiz-wm.desktop.in" >> "${S}/po/POTFILES.skip"
 	echo "metadata/core.xml.in" >> "${S}/po/POTFILES.skip"
 
