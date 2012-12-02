@@ -12,7 +12,7 @@ SRC_URI="http://launchpad.net/${PN}/$(get_version_component_range 1-3)/${PV}/+do
 LICENSE="GPL-2 LGPL-2.1 MIT"
 SLOT="0.9"
 KEYWORDS="~amd64 ~x86"
-IUSE="+cairo debug dbus fuse gnome gtk kde +svg test"
+IUSE="+cairo debug dbus fuse gnome gtk kde +svg test hjkl"
 
 COMMONDEPEND="
 	!x11-wm/compiz-fusion
@@ -107,7 +107,10 @@ pkg_pretend() {
 src_prepare() {
 	epatch "${FILESDIR}/${P}-sandbox.patch"
 
-	epatch "${FILESDIR}"/${PN}-0.9.8-add-hjkl-vi-style-navigation-to-scale-plugin.patch
+	# VI style navigation in compiz scale mode <http://ubuntuforums.org/showthread.php?t=1844119>.
+	if use hjkl; then
+		epatch "${FILESDIR}"/${PN}-0.9.8-add-hjkl-vi-style-navigation-to-scale-plugin.patch
+	fi
 
 	echo "gtk/gnome/compiz-wm.desktop.in" >> "${S}/po/POTFILES.skip"
 	echo "metadata/core.xml.in" >> "${S}/po/POTFILES.skip"
