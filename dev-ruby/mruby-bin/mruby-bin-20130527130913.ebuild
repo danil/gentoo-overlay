@@ -5,7 +5,7 @@
 EAPI="3"
 
 DESCRIPTION="mruby is the lightweight implementation of the Ruby language complying to (part of) the ISO standard"
-HOMEPAGE="http://www.nongnu.org/gpicker"
+HOMEPAGE="https://github.com/mruby/mruby"
 SRC_URI="http://ftp.disco.kutkevich.org/pub/gentoo/${CATEGORY}/${PN}/${P}.tar.xz"
 
 LICENSE="MIT"
