@@ -10,7 +10,7 @@ SRC_URI="http://ftp.disco.kutkevich.org/pub/gentoo/${CATEGORY}/${PN}/${P}.tar.xz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND=""
