@@ -25,7 +25,7 @@ DESCRIPTION="OpenGL compositing window manager."
 HOMEPAGE="https://launchpad.net/compiz"
 LICENSE="GPL-2 LGPL-2.1 MIT"
 SLOT="0.9"
-IUSE="+cairo debug dbus fuse gnome gtk kde +svg test"
+IUSE="+cairo debug dbus fuse gnome gtk kde +svg test hjkl"
 
 COMMONDEPEND="
 	!x11-wm/compiz-fusion
@@ -127,6 +127,11 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.9.9-sandbox.patch"
+
+	# VI style navigation in compiz scale mode <http://ubuntuforums.org/showthread.php?t=1844119>.
+	if use hjkl; then
+		epatch "${FILESDIR}"/${PN}-0.9.8-add-hjkl-vi-style-navigation-to-scale-plugin.patch
+	fi
 
 	echo "gtk/gnome/compiz-wm.desktop.in" >> "${S}/po/POTFILES.skip"
 	echo "metadata/core.xml.in" >> "${S}/po/POTFILES.skip"
