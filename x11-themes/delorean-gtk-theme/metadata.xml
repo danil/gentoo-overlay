@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>danil@kutkevich.org</email>
+    <name>Danil Kutkevich</name>
+  </maintainer>
+  <use>
+    <flag name="chromium">
+      Chromium theme
+    </flag>
+    <flag name="cinnamon">
+      Cinnamon theme
+    </flag>
+    <flag name="firefox">
+      Firefox theme
+    </flag>
+    <flag name="green-theme">
+      Green theme
+    </flag>
+    <flag name="light-theme">
+      Light theme
+    </flag>
+    <flag name="openbox">
+      Openbox theme
+    </flag>
+    <flag name="thunderbird">
+      Thunderbird theme
+    </flag>
+    <flag name="xfwm4">
+      Xfwm4 theme
+    </flag>
+  </use>
+</pkgmetadata>
