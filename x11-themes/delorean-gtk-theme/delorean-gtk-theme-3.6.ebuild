@@ -41,7 +41,7 @@ DEPEND="app-arch/unzip"
 S="${WORKDIR}"
 
 src_install() {
-	rm -r delorean-dark/{unity,Software-Center} || die
+	# rm -r delorean-dark-theme-3.6/{unity,Software-Center} || die
 	if use firefox; then
 		mkdir -p delorean-dark/apps/firefox
 		mv chrome delorean-dark/apps/firefox || die
