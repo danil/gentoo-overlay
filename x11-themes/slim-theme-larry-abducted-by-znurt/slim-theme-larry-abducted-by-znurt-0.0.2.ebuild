@@ -7,7 +7,7 @@ inherit eutils
 
 DESCRIPTION="Larry abducted by Znurt theme for the SLiM"
 HOMEPAGE="https://github.com/danil/slim-larry-abducted-by-znurt"
-SRC_URI="https://github.com/danil/slim-larry-abducted-by-znurt/archive/0.0.1.zip"
+SRC_URI="https://github.com/danil/slim-larry-abducted-by-znurt/archive/${PV}.zip"
 
 LICENSE="CC-BY-SA-2.5"
 SLOT="0"
