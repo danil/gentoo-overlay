@@ -26,7 +26,7 @@ src_compile() {
 }
 
 src_install() {
-	rm slim-larry-abducted-by-znurt/README.md || die "rm README"
+	rm slim-larry-abducted-by-znurt-${PV}/README.md || die "rm README"
 
 	local themesdir="/usr/share/slim/themes"
 	insinto ${themesdir}
