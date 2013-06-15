@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: bar/x11-themes/delorean-gtk-theme/delorean-gtk-theme-2.56.ebuild,v 1.2 2013/01/07 10:41:59 -tclover Exp $
+# $Header: $
 
 EAPI=5
 
@@ -41,7 +41,6 @@ DEPEND="app-arch/unzip"
 S="${WORKDIR}"
 
 src_install() {
-	# rm -r delorean-dark-theme-3.6/{unity,Software-Center} || die
 	if use firefox; then
 		mkdir -p delorean-dark/apps/firefox
 		mv chrome delorean-dark/apps/firefox || die

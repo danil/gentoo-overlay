@@ -31,4 +31,7 @@
       Xfwm4 theme
     </flag>
   </use>
+  <longdescription>
+    The dark brushed-metal theme for gtk3, gtk2, metacity, gnome-shell, cinnamon, xfwm4 &amp; openbox
+  </longdescription>
 </pkgmetadata>
