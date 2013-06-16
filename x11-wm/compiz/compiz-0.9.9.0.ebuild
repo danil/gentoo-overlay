@@ -128,8 +128,9 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.9.9-sandbox.patch"
 
-	# VI style navigation in compiz scale mode <http://ubuntuforums.org/showthread.php?t=1844119>.
+	# VI style navigation in compiz plugins <http://ubuntuforums.org/showthread.php?t=1844119>.
 	if use hjkl; then
+		epatch "${FILESDIR}"/${PN}-0.9-add-hjkl-vi-style-navigation-to-expo-plugin.patch
 		epatch "${FILESDIR}"/${PN}-0.9-add-hjkl-vi-style-navigation-to-scale-plugin.patch
 	fi
 
