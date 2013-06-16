@@ -66,10 +66,10 @@ COMMONDEPEND="
 		>=x11-libs/gtk+-2.18.0
 		>=x11-libs/libwnck-2.19.4
 		x11-libs/pango
+		x11-wm/metacity
 		gnome? (
 			gnome-base/gnome-desktop
 			gnome-base/gconf
-			x11-wm/metacity
 		)
 	)
 	kde? ( kde-base/kwin:4 )
