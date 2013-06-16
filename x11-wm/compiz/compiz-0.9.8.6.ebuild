@@ -136,7 +136,7 @@ src_prepare() {
 
 	# VI style navigation in compiz scale mode <http://ubuntuforums.org/showthread.php?t=1844119>.
 	if use hjkl; then
-		epatch "${FILESDIR}"/${PN}-0.9.8-add-hjkl-vi-style-navigation-to-scale-plugin.patch
+		epatch "${FILESDIR}"/${PN}-0.9-add-hjkl-vi-style-navigation-to-scale-plugin.patch
 	fi
 
 	base_src_prepare
