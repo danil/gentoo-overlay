@@ -1,8 +1,6 @@
-Danil Kutkevich's Gentoo overlay
-================================
-Danil Kutkevich <danil@kutkevich.org>
+My Gentoo overlay
+=================
 
-Simple overlay created by Danil Kutkevich <danil@kutkevich.org>.
 Mostly bleeding edge, dangerous, experimental and unstable packages.
 
 Before You Start
