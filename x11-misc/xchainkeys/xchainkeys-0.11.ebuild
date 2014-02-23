@@ -4,7 +4,7 @@
 
 EAPI=5
 
-DESCRIPTION="Standalone keychains for X11"
+DESCRIPTION="Chained keybindings for X11"
 HOMEPAGE="http://code.google.com/p/xchainkeys"
 SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
