@@ -20,10 +20,6 @@ DEPEND="dev-lisp/common-lisp-controller
 RDEPEND="${DEPEND}
 		dev-lisp/sbcl dev-lisp/cl-clx"
 
-src_configure() {
-	sed "s,@PACKAGE_VERSION@,$PV,g" version.lisp.in > version.lisp
-}
-
 src_compile() {
 	use doc && makeinfo stumpwm.texi.in
 }
@@ -33,9 +29,4 @@ src_install() {
 	common-lisp-system-symlink
 	dodoc README.md NEWS || die
 	use doc && doinfo stumpwm.info
-}
-
-pkg_postinst() {
-	common-lisp_pkg_postinst
-	cat "${FILESDIR}/README.Gentoo"
 }
