@@ -31,7 +31,7 @@ src_compile() {
 src_install() {
 	common-lisp-install *.lisp stumpwm.asd
 	common-lisp-system-symlink
-	dodoc README NEWS ChangeLog "${FILESDIR}/README.Gentoo" || die
+	dodoc README.md NEWS ChangeLog "${FILESDIR}/README.Gentoo" || die
 	use doc && doinfo stumpwm.info
 }
 
