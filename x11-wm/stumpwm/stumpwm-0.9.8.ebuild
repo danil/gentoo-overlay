@@ -12,13 +12,18 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="doc"
+CLPACKAGE="stumpwm"
 
 DEPEND="dev-lisp/common-lisp-controller
 		virtual/commonlisp
 		dev-lisp/cl-ppcre
 		doc? ( sys-apps/texinfo virtual/texi2dvi )"
 RDEPEND="${DEPEND}
-		dev-lisp/sbcl dev-lisp/cl-clx"
+		dev-lisp/sbcl
+		dev-lisp/cl-clx"
+
+# <https://github.com/stumpwm/stumpwm/wiki/FAQ#wiki-im-on-gentoo-and-stumpwm-fails-to-start-it-produces-the-error-there-is-no-applicable-method-for-the-generic-function--when-called-with-arguments-nil>
+RDEPEND="${RDEPEND} media-fonts/font-misc-misc"
 
 src_compile() {
 	use doc && makeinfo stumpwm.texi.in
