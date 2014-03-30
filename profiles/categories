@@ -4,8 +4,10 @@ app-text
 dev-lua
 dev-ruby
 kutkevich
+media-fonts
 media-sound
 net-wireless
+sys-process
 www-servers
 x11-base
 x11-misc
