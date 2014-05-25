@@ -29,5 +29,5 @@
 
 #--- END OF EXAMPLES ---
 
-# Danil Kutkevich <danil@kutkevich.org> (9 May 2010)
+# Danil Kutkevich <danil@danil.sexy> (9 May 2010)
 # Masking these versions because is a live ebuilds (revision control) checkout
