@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>danil@danil.sexy</email>
+    <name>Danil Kutkevich</name>
+  </maintainer>
+  <maintainer>
+    <name>andy (layman overlay) <http://gpo.zugaina.org/app-emulation/vagrant-bin></name>
+  </maintainer>
+  <upstream>
+    <remote-id type="github">danil</remote-id>
+    <bugs-to>https://github.com/danil/gentoo-overlay/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
