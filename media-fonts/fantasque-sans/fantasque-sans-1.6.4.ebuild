@@ -21,3 +21,8 @@ RDEPEND=""
 FONT_SUFFIX="ttf"
 
 DOCS="README.md"
+
+src_prepare() {
+	mkdir "${S}"
+	mv "${WORKDIR}/*" "${S}"
+}
