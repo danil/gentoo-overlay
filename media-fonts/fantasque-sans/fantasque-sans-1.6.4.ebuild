@@ -19,10 +19,7 @@ DEPEND="app-arch/unzip"
 RDEPEND=""
 
 FONT_SUFFIX="ttf"
-
 DOCS="README.md"
 
-src_prepare() {
-	mkdir "${S}"
-	mv "${WORKDIR}/*" "${S}"
-}
+# Because vendor archive place files without directory.
+S="${WORKDIR}"
