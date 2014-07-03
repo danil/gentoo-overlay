@@ -22,4 +22,5 @@ DEPEND="app-arch/unzip"
 RDEPEND=""
 
 FONT_SUFFIX="ttf"
-S="${WORKDIR}/FiraFonts3110/FiraSans3110"
+S="${WORKDIR}/FiraFonts3110"
+FONT_S="${WORKDIR}/FiraFonts3110/FiraSans3110/WEB"
