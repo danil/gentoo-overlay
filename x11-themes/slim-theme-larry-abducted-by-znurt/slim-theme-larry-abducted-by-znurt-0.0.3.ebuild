@@ -26,7 +26,7 @@ src_compile() {
 }
 
 src_install() {
-	mv slim-larry-abducted-by-znurt-v${PV} slim-larry-abducted-by-znurt || die "mv directory"
+	mv slim-larry-abducted-by-znurt-${PV} slim-larry-abducted-by-znurt || die "mv directory"
 	rm slim-larry-abducted-by-znurt/README.md || die "rm README"
 
 	local themesdir="/usr/share/slim/themes"
