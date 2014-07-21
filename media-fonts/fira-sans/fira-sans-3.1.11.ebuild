@@ -22,4 +22,4 @@ RDEPEND=""
 
 FONT_SUFFIX="ttf"
 S="${WORKDIR}/FiraFonts${MY_PV}"
-FONT_S="${WORKDIR}/FiraFonts3111/FiraSans${MY_PV}/WEB"
+FONT_S="${WORKDIR}/FiraFonts${MY_PV}/FiraSans${MY_PV}/WEB"
