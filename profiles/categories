@@ -1,6 +1,7 @@
 app-admin
 app-cdr
 app-emulation
+app-misc
 app-text
 dev-lua
 dev-ruby
