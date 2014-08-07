@@ -16,3 +16,7 @@ KEYWORDS="~amd64"
 RDEPEND=""
 DEPEND="${RDEPEND}
 	sys-libs/zlib"
+
+src_compile() {
+	emake
+}
