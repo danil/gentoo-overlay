@@ -7,7 +7,7 @@ inherit eutils toolchain-funcs
 
 DESCRIPTION="A full-screen Expose-style standalone task switcher for X11"
 HOMEPAGE="https://github.com/richardgv/skippy-xd"
-SRC_URI="https://github.com/richardgv/${PN}/archive/998e0e75666f31c278affbab687dca84b94ea20d.zip"
+SRC_URI="https://github.com/richardgv/${PN}/archive/998e0e75666f31c278affbab687dca84b94ea20d.zip -> ${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
