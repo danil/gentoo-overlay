@@ -5,9 +5,11 @@
 EAPI=2
 inherit eutils toolchain-funcs
 
+MY_REV="998e0e75666f31c278affbab687dca84b94ea20d"
+
 DESCRIPTION="A full-screen Expose-style standalone task switcher for X11"
 HOMEPAGE="https://github.com/richardgv/skippy-xd"
-SRC_URI="https://github.com/richardgv/${PN}/archive/998e0e75666f31c278affbab687dca84b94ea20d.zip -> ${P}.zip"
+SRC_URI="https://github.com/richardgv/${PN}/archive/${MY_REV}.zip -> ${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,6 +26,8 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/xineramaproto
 	virtual/pkgconfig"
+
+S="${WORKDIR}/${PN}-${MY_REV}"
 
 src_compile() {
 	tc-export CC
