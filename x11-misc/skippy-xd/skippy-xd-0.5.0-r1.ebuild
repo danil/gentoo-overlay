@@ -40,7 +40,7 @@ src_install() {
 }
 pkg_postinst() {
 	echo
-	elog "You should copy skippy-xd.rc-default"
+	elog "You should copy skippy-xd.sample.rc"
 	elog "from /usr/share/doc/${PF} to ~/.config/skippy-xd/skippy-xd.rc"
 	elog "and edit the keysym used to invoke skippy."
 	elog "Use x11-apps/xev to find out the keysym."
