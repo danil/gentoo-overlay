@@ -25,11 +25,6 @@ DEPEND="${RDEPEND}
 	x11-proto/xineramaproto
 	virtual/pkgconfig"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-pointer-size.patch \
-		"${FILESDIR}"/${P}-Makefile.patch
-}
-
 src_compile() {
 	tc-export CC
 	emake || die
@@ -37,13 +32,13 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc CHANGELOG skippyrc-default
+	dodoc CHANGELOG skippy-xd.sample.rc
 }
-
 pkg_postinst() {
 	echo
-	elog "You should copy skippyrc-default from /usr/share/doc/${PF} to"
-	elog "~/.skippyrc and edit the keysym used to invoke skippy."
+	elog "You should copy skippy-xd.rc-default"
+	elog "from /usr/share/doc/${PF} to ~/.config/skippy-xd/skippy-xd.rc"
+	elog "and edit the keysym used to invoke skippy."
 	elog "Use x11-apps/xev to find out the keysym."
 	echo
 }
