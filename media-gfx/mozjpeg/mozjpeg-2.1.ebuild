@@ -17,9 +17,9 @@ RDEPEND=""
 DEPEND="${RDEPEND}
 	sys-libs/zlib"
 
-# src_prepare() {
-# 	eautoreconf
-# }
+src_prepare() {
+	eautoreconf
+}
 
 src_compile() {
 	emake
