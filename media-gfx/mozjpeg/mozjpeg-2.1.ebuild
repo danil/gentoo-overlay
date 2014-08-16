@@ -7,7 +7,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="Improved JPEG encoder"
 HOMEPAGE="https://github.com/mozilla/mozjpeg"
-SRC_URI="https://github.com/mozilla/${PN}/archive/v${PV}.tar.gz"
+SRC_URI="https://github.com/mozilla/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -16,6 +16,10 @@ KEYWORDS="~amd64"
 RDEPEND=""
 DEPEND="${RDEPEND}
 	sys-libs/zlib"
+
+# src_prepare() {
+# 	eautoreconf
+# }
 
 src_compile() {
 	emake
