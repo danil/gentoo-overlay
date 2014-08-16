@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=5
-inherit autotools toolchain-funcs
+inherit autotools
 
 DESCRIPTION="Improved JPEG encoder"
 HOMEPAGE="https://github.com/mozilla/mozjpeg"
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND=""
-DEPEND="${RDEPEND}
-	sys-libs/zlib"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	eautoreconf || die
@@ -23,4 +22,8 @@ src_prepare() {
 
 src_compile() {
 	emake || die
+}
+
+src_install() {
+	newbin cjpeg mozcjpeg || die
 }
