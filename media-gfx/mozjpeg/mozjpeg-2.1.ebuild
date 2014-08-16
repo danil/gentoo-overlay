@@ -24,6 +24,15 @@ src_compile() {
 	emake || die
 }
 
+MY_EXECUTEABLE="mozcjpeg"
+
 src_install() {
-	newbin cjpeg mozcjpeg || die
+	newbin cjpeg ${MY_EXECUTEABLE} || die
+}
+
+pkg_postinst() {
+	echo
+	elog "You should use ${MY_EXECUTEABLE} like described in"
+	elog "https://hacks.mozilla.org/2014/08/using-mozjpeg-to-create-efficient-jpegs"
+	echo
 }
