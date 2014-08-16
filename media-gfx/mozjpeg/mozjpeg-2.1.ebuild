@@ -3,7 +3,7 @@
 # $Header: $
 
 EAPI=5
-inherit toolchain-funcs
+inherit autotools toolchain-funcs
 
 DESCRIPTION="Improved JPEG encoder"
 HOMEPAGE="https://github.com/mozilla/mozjpeg"
@@ -18,9 +18,9 @@ DEPEND="${RDEPEND}
 	sys-libs/zlib"
 
 src_prepare() {
-	eautoreconf
+	eautoreconf || die
 }
 
 src_compile() {
-	emake
+	emake || die
 }
