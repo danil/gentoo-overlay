@@ -5,6 +5,7 @@ app-misc
 app-text
 dev-lua
 dev-ruby
+dev-vcs
 kutkevich
 media-fonts
 media-gfx
