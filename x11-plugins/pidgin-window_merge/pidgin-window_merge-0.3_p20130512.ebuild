@@ -3,6 +3,7 @@
 # $Header: $
 
 EAPI=4
+inherit autotools
 
 DESCRIPTION="A Pidgin plugin that merges the Buddy List window with a conversation window"
 HOMEPAGE="https://github.com/dm0-/window_merge"
