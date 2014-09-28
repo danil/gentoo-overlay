@@ -6,9 +6,11 @@ EAPI=4
 
 inherit eutils python
 
+MY_VARSION="3.0-latest"
+
 DESCRIPTION="Simple and easy-to-use C language RPC framework"
 HOMEPAGE="http://seafile.com"
-SRC_URI="https://github.com/haiwen/${PN}/archive/v3.0-latest.tar.gz -> ${PN}-${PV}.tar.gz"
+SRC_URI="https://github.com/haiwen/${PN}/archive/v${MY_VARSION}.tar.gz -> ${PN}-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-3"
@@ -20,6 +22,8 @@ DEPEND=">=dev-lang/python-2.5
 	virtual/pkgconfig"
 
 RDEPEND=""
+
+S="${WORKDIR}/${PN}-${MY_VARSION}"
 
 pkg_setup() {
 	python_set_active_version 2
