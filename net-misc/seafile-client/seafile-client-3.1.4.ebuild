@@ -4,7 +4,7 @@
 
 EAPI=4
 
-inherit eutils python
+inherit eutils python qt4-r2
 
 DESCRIPTION="Seafile desktop client"
 HOMEPAGE="http://seafile.com"
@@ -14,9 +14,13 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND=">=net-misc/seafile-${PV}[client] dev-libs/jansson"
-
-RDEPEND=""
+# RDEPEND=">=net-misc/seafile-${PV}[client] dev-libs/jansson"
+RDEPEND="
+	>=net-misc/seafile-${PV}[client]
+	dev-libs/jansson
+	dev-qt/qtdbus:4
+	dev-qt/qtwebkit:4"
+DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	python_set_active_version 2
