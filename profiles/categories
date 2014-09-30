@@ -13,6 +13,7 @@ media-sound
 net-libs
 net-misc
 net-wireless
+sys-apps
 sys-process
 www-servers
 x11-base
