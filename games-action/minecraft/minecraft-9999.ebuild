@@ -10,12 +10,13 @@ DESCRIPTION="Minecraft is a game about placing blocks while running from skeleto
 HOMEPAGE="http://minecraft.net"
 
 MY_PN="Minecraft"
-URI="https://s3.amazonaws.com/${MY_PN}.Download/launcher/${MY_PN}.jar -> ${PN}-${PV}.jar"
+URI="https://s3.amazonaws.com/${MY_PN}.Download/launcher/${MY_PN}.jar"
 
 LICENSE="Minecraft"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
+RESTRICT="mirror"
 
 DEPEND="net-misc/wget"
 RDEPEND="x11-apps/xrandr
