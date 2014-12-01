@@ -15,6 +15,7 @@ net-libs
 net-misc
 net-wireless
 sys-apps
+sys-firmware
 sys-process
 www-servers
 x11-base
