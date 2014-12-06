@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="
 	sys-devel/bison
-	dev-lang/ruby"
+	virtual/rubygems"
 RDEPEND=""
 
 src_install() {
