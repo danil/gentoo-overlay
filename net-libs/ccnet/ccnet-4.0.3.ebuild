@@ -18,16 +18,16 @@ LICENSE="GPL-3"
 KEYWORDS="~amd64"
 IUSE="client server ldap"
 
-RDEPEND=">net-libs/libsearpc-3.0.7
+RDEPEND="
+	>net-libs/libsearpc-3.0.7
 	>=dev-libs/glib-2.16
 	>=dev-lang/vala-0.8
 	>=dev-db/libzdb-2.10.2
-	virtual/pkgconfig
 	${PYTHON_DEPS}
 	>=dev-libs/libevent-2
 	ldap? ( net-nds/openldap )"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND} virtual/pkgconfig"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 

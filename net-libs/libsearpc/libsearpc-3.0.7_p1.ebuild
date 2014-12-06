@@ -19,14 +19,14 @@ SLOT="0"
 LICENSE="GPL-3"
 KEYWORDS="~amd64"
 
-RDEPEND="${PYTHON_DEPS}
+RDEPEND="
+	${PYTHON_DEPS}
 	>=dev-libs/glib-2.26
 	>=dev-libs/jansson-2.2.1
 	dev-python/pygobject:2[${PYTHON_USEDEP}]
-	dev-python/simplejson[${PYTHON_USEDEP}]
-	virtual/pkgconfig"
+	dev-python/simplejson[${PYTHON_USEDEP}]"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND} virtual/pkgconfig"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 

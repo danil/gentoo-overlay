@@ -22,14 +22,13 @@ RDEPEND="
 	${PYTHON_DEPS}
 	>=net-libs/ccnet-${PV}
 	>=net-libs/libevhtp-1.1.6
-	virtual/pkgconfig
 	dev-libs/jansson
 	>=dev-libs/libevent-2
 	fuse? ( >=sys-fs/fuse-2.7.3 )
 	client? ( >=net-libs/ccnet-${PV}[client] )
 	server? ( >=net-libs/ccnet-${PV}[server] )"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND} virtual/pkgconfig"
 
 REQUIRED_USE="
 ${PYTHON_REQUIRED_USE}
