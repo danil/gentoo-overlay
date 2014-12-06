@@ -4,8 +4,6 @@ My Gentoo overlay
 Mostly bleeding edge, dangerous, experimental and unstable packages.
 
 [![Build Status](http://img.shields.io/travis/danil/overlays/master.svg?style=flat)](https://travis-ci.org/danil/overlays)
-[![devDependency Status](http://img.shields.io/david/dev/danil/overlays.svg?style=flat)](https://david-dm.org/danil/overlays#info=devDependencies)
-[![Dependency Status](http://img.shields.io/david/danil/overlays.svg?style=flat)](https://david-dm.org/danil/overlays)
 
 Before You Start
 ----------------
