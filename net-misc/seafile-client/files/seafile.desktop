@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Exec=seafile-applet
+Name=Seafile
+OnlyShowIn=XFCE;
+Terminal=false
+Type=Application
