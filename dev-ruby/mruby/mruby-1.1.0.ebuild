@@ -11,10 +11,12 @@ SRC_URI="https://github.com/mruby/mruby/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="local-mri"
+IUSE=""
 
-DEPEND="sys-devel/bison"
-RDEPEND="!local-mri? ( dev-lang/ruby )"
+DEPEND="
+	sys-devel/bison
+	dev-lang/ruby"
+RDEPEND=""
 
 src_install() {
 	dobin bin/{mirb,mrbc,mruby}

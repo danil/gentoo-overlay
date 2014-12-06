@@ -17,10 +17,4 @@
     compiled byte code in a C source file, see the "mrbtest" program under
     the "test" directory for an example.
   </longdescription>
-  <use>
-    <flag name="local-mri">
-      Do not install global Ruby MRI (Matz's Ruby Interpreter).
-      Suppose they be installed locally (via rbenv or rvm).
-    </flag>
-  </use>
 </pkgmetadata>
