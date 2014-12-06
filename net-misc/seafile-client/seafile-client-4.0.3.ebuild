@@ -30,10 +30,3 @@ src_compile() {
 	cmake . || die "src_compile failed"
 	emake -j1 || die "emake failed"
 }
-
-src_install() {
-	einstall
-	dodir /etc/xdg/autostart
-	install -m 644 "${FILESDIR}"/seafile.desktop \
-		"${D}"/etc/xdg/autostart/seafile.desktop || die
-}
