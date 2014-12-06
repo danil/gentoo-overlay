@@ -28,5 +28,5 @@ pkg_setup() {
 
 src_compile() {
 	cmake . || die "src_compile failed"
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
