@@ -16,7 +16,7 @@ SRC_URI="https://github.com/haiwen/${PN}/archive/v${PV}.tar.gz -> ${PN}-${PV}.ta
 LICENSE="GPL-3"
 KEYWORDS="~amd64"
 SLOT="0"
-IUSE="server client fuse"
+IUSE="server client fuse console"
 
 RDEPEND="
 	${PYTHON_DEPS}
@@ -40,10 +40,10 @@ AUTOTOOLS_AUTORECONF=1
 
 src_configure() {
 	local myeconfargs=(
-		$(use_enable fuse) \
-			$(use_enable client) \
-			$(use_enable server) \
-			--enable-console
+		$(use_enable fuse)
+		$(use_enable client)
+		$(use_enable server)
+		$(use_enable console)
 		)
 	autotools-utils_src_configure
 }

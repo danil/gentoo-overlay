@@ -7,13 +7,10 @@
   </maintainer>
   <use>
     <flag name="client">
-      ???
-    </flag>
-    <flag name="cluster">
-      ???
+      Configure with Seafile client
     </flag>
     <flag name="server">
-      ???
+      Configure with Seafile server
     </flag>
   </use>
 </pkgmetadata>
