@@ -18,10 +18,4 @@ IUSE=""
 DEPEND=""
 RDEPEND="dev-lang/lua"
 
-src_prepare() {
-	./autogen.sh || die
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-}
+S="${WORKDIR}/${PN}-${MY_VERSION}"
