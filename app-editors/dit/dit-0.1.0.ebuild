@@ -4,6 +4,8 @@
 
 EAPI="3"
 
+inherit autotools-utils
+
 MY_VERSION="0.1"
 
 DESCRIPTION="An ncurses-based text editor for Unix systems"
