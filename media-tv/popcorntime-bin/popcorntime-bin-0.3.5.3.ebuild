@@ -8,8 +8,10 @@ inherit eutils fdo-mime multilib
 
 DESCRIPTION="Watch torrent movies instantly"
 HOMEPAGE="http://popcorn.cdnjd.com/"
-SRC_URI="x86?   ( http://get.popcorntime.io/build/Popcorn-Time-${PV}-Linux32.tar.xz )
-		 amd64? ( http://get.popcorntime.io/build/Popcorn-Time-${PV}-Linux64.tar.xz )"
+SRC_URI="
+		x86?   ( http://get.popcorntime.io/build/Popcorn-Time-${PV}-Linux32.tar.xz )
+		amd64? ( http://get.popcorntime.io/build/Popcorn-Time-${PV}-Linux64.tar.xz )
+		https://raw.githubusercontent.com/popcorn-official/popcorn-site/master/src/images/logo-valentines.png"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -37,7 +39,7 @@ src_install() {
 	doins "${FILESDIR}"/${PN}.desktop
 
 	insinto /usr/share/pixmaps
-	doins "${FILESDIR}"/${PN}.png
+	doins "${DISTDIR}"/logo-valentines.png
 }
 
 pkg_postinst() {
