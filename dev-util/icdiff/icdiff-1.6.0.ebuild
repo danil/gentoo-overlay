@@ -20,6 +20,8 @@ IUSE=""
 DEPEND=""
 RDEPEND="${PYTHON_DEPS}"
 
+S="${WORKDIR}/${PN}-release-${PV}"
+
 src_install() {
 	doexe ${PN}
 	dodoc README.md ChangeLog
