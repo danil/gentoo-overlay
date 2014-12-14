@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit git-2 autotools eutils
+inherit git-2 autotools
 
 DESCRIPTION="Set of window manipulation tools"
 HOMEPAGE="https://github.com/wmutils/core"
@@ -17,7 +17,3 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="x11-misc/xcb"
-
-src_prepare() {
-	epatch "${FILESDIR}"/fix-man-makefile.patch
-}
