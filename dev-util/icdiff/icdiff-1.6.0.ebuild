@@ -23,6 +23,8 @@ RDEPEND="${PYTHON_DEPS}"
 S="${WORKDIR}/${PN}-release-${PV}"
 
 src_install() {
+	exeinto /usr/bin
 	doexe ${PN}
+
 	dodoc README.md ChangeLog
 }
