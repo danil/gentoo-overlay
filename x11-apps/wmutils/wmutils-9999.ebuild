@@ -18,6 +18,6 @@ IUSE=""
 DEPEND=""
 RDEPEND="x11-misc/xcb"
 
-PATCHES=(
-	"${FILESDIR}"/fix-man-makefile.patch
-)
+src_prepare() {
+	epatch "${FILESDIR}"/fix-man-makefile.patch
+}
