@@ -1,0 +1,13 @@
+--- a/man/Makefile	2014-12-14 18:55:12.414525780 +0300
++++ b/man/Makefile	2014-12-14 18:54:02.224775878 +0300
+@@ -30,8 +30,8 @@
+ 	@$(GZ) -c $< > $@
+ 
+ install: $(MAN)
+-	mkdir -p $(DESTDIR)$(MANPREFIX)/bin/
+-	cp -f $(BIN) $(DESTDIR)$(MANPREFIX)/man1/
++	mkdir -p $(DESTDIR)$(MANPREFIX)/man1/
++	cp -f $(MAN) $(DESTDIR)$(MANPREFIX)/man1/
+ 
+ uninstall:
+ 	@echo "removing manpages"
