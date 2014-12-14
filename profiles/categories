@@ -21,6 +21,7 @@ sys-apps
 sys-firmware
 sys-process
 www-servers
+x11-apps
 x11-base
 x11-misc
 x11-plugins
