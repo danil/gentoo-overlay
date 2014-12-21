@@ -32,3 +32,5 @@ RDEPEND="
 # 	weather? ( dev-python/pywapi )
 # 	wifi? ( dev-python/netifaces dev-python/basiciw )
 # 	pulseaudio? ( dev-python/colour )"
+
+S="${WORKDIR}/${PN}-${MY_VERSION}"
