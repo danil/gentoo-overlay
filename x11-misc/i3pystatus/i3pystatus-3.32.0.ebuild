@@ -6,7 +6,7 @@ EAPI=5
 
 PYTHON_COMPAT=( python{3_3,3_4} )
 
-inherit python-r1
+inherit python-r1 distutils-r1
 
 MY_VERSION="3.32"
 
