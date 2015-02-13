@@ -25,6 +25,8 @@ DEPEND="
 	xinerama? ( x11-proto/xineramaproto )
 "
 
+S="${WORKDIR}/${PN}-${MY_REV}"
+
 src_prepare() {
 	sed -i \
 		-e "s/CFLAGS = -std=c99 -pedantic -Wall -Os/CFLAGS += -std=c99 -pedantic -Wall/" \
