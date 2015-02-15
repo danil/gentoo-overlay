@@ -8,7 +8,7 @@ inherit eutils savedconfig toolchain-funcs
 MY_REV="35db6d8afc3fd9f80166feac6c1e4adf71d553c3"
 
 DESCRIPTION="a dynamic window manager for X11"
-HOMEPAGE="http://dwm.suckless.org/"
+HOMEPAGE="http://dwm.suckless.org"
 SRC_URI="http://git.suckless.org/${PN}/snapshot/${PN}-${MY_REV}.tar.bz2 -> ${P}.tar.bz2"
 
 LICENSE="MIT"
