@@ -5,7 +5,7 @@
 EAPI=5
 inherit eutils savedconfig toolchain-funcs
 
-MY_REV="c2a23fa06f2cbeda154b25254da9a18f15e21340"
+MY_REV="13a529ce63364544bdc851dfd5d3aa2ef8740914"
 
 DESCRIPTION="a generic, highly customizable, and efficient menu for the X Window System"
 HOMEPAGE="http://tools.suckless.org/dmenu/"
