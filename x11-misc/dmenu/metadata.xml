@@ -5,7 +5,4 @@
     <email>danil@kutkevich.org</email>
     <name>Danil Kutkevich</name>
   </maintainer>
-  <use>
-    <flag name="xft">Enable unofficial <pkg>x11-libs/libXft</pkg> support</flag>
-  </use>
 </pkgmetadata>
