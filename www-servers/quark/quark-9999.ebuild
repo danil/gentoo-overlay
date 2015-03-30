@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit eutils savedconfig toolchain-funcs git-r3
+inherit savedconfig git-r3
 
 DESCRIPTION="quark is an extremly small web server"
 HOMEPAGE="http://tools.suckless.org/quark"
