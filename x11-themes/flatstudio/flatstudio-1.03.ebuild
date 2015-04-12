@@ -4,6 +4,8 @@
 
 EAPI="4"
 
+# The name section should contain only lowercase letters
+# <https://devmanual.gentoo.org/ebuild-writing/file-format/>.
 MY_PACKAGE_NAME="FlatStudio"
 
 DESCRIPTION="Flat GTK 2/3 theme"
