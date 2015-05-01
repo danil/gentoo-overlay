@@ -16,3 +16,5 @@ IUSE=""
 
 RDEPEND=""
 DEPEND=""
+
+S="${WORKDIR}/${PN}-${COMMIT}"
