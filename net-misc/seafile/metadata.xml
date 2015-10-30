@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>danil@kutkevich.org</email>
+    <name>Danil Kutkevich</name>
+  </maintainer>
+  <use>
+    <flag name="console">
+      Configure with console
+    </flag>
+    <flag name="client">
+      Configure with client
+    </flag>
+    <flag name="fuse">
+      Enables support for the filesystem in userspace plugin
+      through <pkg>sys-fs/fuse</pkg>.
+    </flag>
+    <flag name="server">
+      Configure with server
+    </flag>
+  </use>
+</pkgmetadata>
