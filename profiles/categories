@@ -5,7 +5,6 @@ app-emulation
 app-misc
 app-text
 dev-lua
-dev-ruby
 dev-util
 dev-vcs
 games-action
@@ -14,7 +13,6 @@ media-fonts
 media-gfx
 media-sound
 media-tv
-net-libs
 net-misc
 net-p2p
 net-wireless
