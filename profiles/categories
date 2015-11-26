@@ -4,6 +4,7 @@ app-editors
 app-emulation
 app-misc
 app-text
+dev-lang
 dev-lua
 dev-util
 dev-vcs
