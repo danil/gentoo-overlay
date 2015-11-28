@@ -26,7 +26,7 @@ DEPEND="${PYTHON_DEPS}
 
 src_prepare() {
 	# Make sure no bundled libraries are used.
-	find third_party -type f \! -iname '*.gyp*' -delete || die
+	find src/third_party -type f \! -iname '*.gyp*' -delete || die
 }
 
 src_configure() {
