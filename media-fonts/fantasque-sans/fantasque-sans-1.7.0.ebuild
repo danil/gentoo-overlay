@@ -8,7 +8,7 @@ inherit font
 
 DESCRIPTION="Programming font designed with with some handwriting-like fuzziness"
 HOMEPAGE="https://github.com/belluzj/fantasque-sans"
-SRC_URI="https://github.com/belluzj/${PN}/releases/download/v${PV}/FantasqueSansMono.zip"
+SRC_URI="https://github.com/belluzj/${PN}/releases/download/v${PV}/FantasqueSansMono.zip -> ${P}.zip"
 
 LICENSE="OFL-1.1"
 SLOT="0"
