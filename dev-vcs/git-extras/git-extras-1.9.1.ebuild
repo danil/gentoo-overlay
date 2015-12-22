@@ -5,7 +5,7 @@
 EAPI=5
 inherit bash-completion-r1
 
-DESCRIPTION="GIT utilities -- repo summary, repl, changelog population, author commit percentages and more"
+DESCRIPTION="Git repo summary, repl, changelog population, author commit percentages"
 HOMEPAGE="https://github.com/visionmedia/git-extras"
 SRC_URI="https://github.com/visionmedia/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
