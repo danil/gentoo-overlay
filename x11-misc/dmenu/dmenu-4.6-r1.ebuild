@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=5
-inherit eutils toolchain-funcs savedconfig
+inherit eutils savedconfig toolchain-funcs
 
 DESCRIPTION="a generic, highly customizable, and efficient menu for the X Window System"
 HOMEPAGE="http://tools.suckless.org/dmenu/"
@@ -35,6 +35,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${PN}-4.6-gentoo.patch
 
+	restore_config config.h
 	epatch_user
 }
 
@@ -54,4 +55,11 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" PREFIX="/usr" install
+
+	save_config config.h
+}
+
+pkg_postinst() {
+	einfo "This ebuild has support for user defined configs"
+	einfo "Please read this ebuild for more details and re-emerge as needed"
 }
