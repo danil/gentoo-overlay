@@ -19,6 +19,7 @@ net-wireless
 sys-apps
 sys-firmware
 sys-process
+www-client
 www-servers
 x11-apps
 x11-base
