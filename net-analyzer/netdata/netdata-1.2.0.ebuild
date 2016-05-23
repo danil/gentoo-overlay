@@ -6,21 +6,13 @@ EAPI=6
 
 inherit linux-info systemd user
 
-if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://github.com/firehol/${PN}.git"
-	inherit git-r3 autotools
-	SRC_URI=""
-	KEYWORDS=""
-else
-	SRC_URI="http://firehol.org/download/${PN}/releases/v${PV}/${P}.tar.xz"
-	KEYWORDS="~amd64 ~x86"
-fi
-
-DESCRIPTION="Linux real time system monitoring, done right!"
-HOMEPAGE="https://github.com/firehol/netdata http://netdata.firehol.org/"
+DESCRIPTION="Real-time performance monitoring"
+HOMEPAGE="https://github.com/firehol/${PN} http://my-netdata.io"
+SRC_URI="https://github.com/firehol/${PN}/releases/download/v${PV}/netdata-${PV}.tar.xz -> ${P}.tar.xz"
 
 LICENSE="GPL-3+ MIT BSD"
 SLOT="0"
+KEYWORDS="~amd64"
 IUSE="+compression nfacct nodejs"
 
 # most unconditional dependencies are for plugins.d/charts.d.plugin:
