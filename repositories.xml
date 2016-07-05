@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "http://www.gentoo.org/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name><![CDATA[kutkevich]]></name>
+    <description lang="en"><![CDATA[Personal Gentoo overlay]]></description>
+    <homepage>https://github.com/danil/overlays</homepage>
+    <owner type="person">
+      <email>danil@kutkevich.org</email>
+      <name><![CDATA[Danil Kutkevich]]></name>
+    </owner>
+    <source type="git">https://github.com/danil/overlays.git</source>
+    <feed>https://github.com/danil/overlays/commits/master.atom</feed>
+  </repo>
+</repositories>
