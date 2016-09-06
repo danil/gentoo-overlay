@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -20,7 +20,7 @@ RDEPEND="
 	x11-libs/libXext
 
 	opengl? (
-		media-libs/glew
+		>media-libs/glew-1:*
 		media-libs/imlib2
 		virtual/opengl
 		x11-libs/libXrandr
