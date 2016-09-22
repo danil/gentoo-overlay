@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=6
+EAPI=5
 inherit eutils savedconfig toolchain-funcs
 
 MY_REV="ab9571bbc5f6fb04fd583238a665a7e830fc1397"
