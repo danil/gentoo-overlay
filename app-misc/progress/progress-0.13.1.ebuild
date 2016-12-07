@@ -1,14 +1,14 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=4
+EAPI=6
 
 inherit vcs-snapshot
 
 DESCRIPTION="Linux tool to show progress for cp, rm, dd, ..."
-HOMEPAGE="https://github.com/Xfennec/cv"
-SRC_URI="https://github.com/Xfennec/cv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://github.com/Xfennec/progress"
+SRC_URI="https://github.com/Xfennec/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -19,5 +19,5 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_install() {
-	dobin cv
+	dobin progress
 }
