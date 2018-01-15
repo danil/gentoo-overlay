@@ -14,3 +14,6 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="x11-misc/xcb"
+
+# Because vendor archive contains "core-${PV}" directory instead of "wmutils-${PV}".
+S="${WORKDIR}/core-${PV}"
