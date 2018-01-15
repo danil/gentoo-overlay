@@ -5,4 +5,7 @@
     <email>danil@kutkevich.org</email>
     <name>Danil Kutkevich</name>
   </maintainer>
+  <upstream>
+    <remote-id type="github">wmutils/core</remote-id>
+  </upstream>
 </pkgmetadata>
