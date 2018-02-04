@@ -2,6 +2,8 @@ app-admin
 app-emulation
 app-misc
 app-text
+dev-db
+dev-libs
 dev-lua
 dev-util
 dev-vcs
