@@ -5,4 +5,9 @@
     <email>danil@kutkevich.org</email>
     <name>Danil Kutkevich</name>
   </maintainer>
+  <use>
+    <flag name="noloopk">
+      Version of the font with a built-in stylistic set ss01 (no-loop k)
+    </flag>
+  </use>
 </pkgmetadata>
