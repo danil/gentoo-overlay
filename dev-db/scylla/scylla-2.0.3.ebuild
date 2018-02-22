@@ -81,8 +81,10 @@ RDEPEND="
 	systemd? ( sys-apps/systemd )
 "
 DEPEND="${RDEPEND}
+	>=sys-devel/gcc-7
 	>=sys-kernel/linux-headers-3.5
 	dev-util/ninja
+	>=dev-libs/boost-1.63.0
 "
 
 # Discussion about kernel configuration:
