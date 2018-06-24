@@ -49,7 +49,7 @@ IUSE="doc systemd"
 RESTRICT="test"
 
 RDEPEND="
-	app-admin/collectd
+	app-metrics/collectd
 	app-arch/lz4
 	=app-admin/scylla-tools-${PV}
 	=app-admin/scylla-jmx-${PV}
