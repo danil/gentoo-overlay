@@ -25,13 +25,17 @@ DEPEND="
 
 src_prepare() {
 	eapply_user
-	sed -e '/^CFLAGS/s:[[:space:]]-O[^[:space:]]*[[:space:]]: :' \
-		-e '/^X11INC/{s:/usr/X11R6/include:/usr/include/X11:}' \
-		-e "/^X11LIB/{s:/usr/X11R6/lib:/usr/$(get_libdir)/X11:}" \
-		-i config.mk || die
-	sed -e '/@echo/!s:@::' \
-		-e '/tic/d' \
-		-i Makefile || die
+
+	sed -i \
+		-e '/^CFLAGS/{s: -Os::g; s:= :+= :g}' \
+		-e '/^CFLAGS/{s: -Wall::g; s: -Wextra::g}' \
+		-e '/^LDFLAGS/{s:-s::g; s:= :+= :g}' \
+		-e '/^CC/d' \
+		config.mk || die
+	sed -i \
+		-e 's|@${CC}|$(CC)|g' \
+		Makefile || die
+
 	tc-export CC
 	restore_config config.h
 }
